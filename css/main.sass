@@ -1,0 +1,151 @@
+// Цвета 
+$black: #000000 // Основной цвет текста
+$hml-clr-bt: #e8e8e8 // Полоска head-menu-line
+$slog-blue: #039 // синий цвет текста 
+$red: #c00 // красный цвет текста
+$link-default: #333333 // ссылки по умолчанию
+
+body
+  font-family: 'Open Sans', sans-serif
+  color: $black
+  font-size: 14px
+
+a
+  color: $link-default
+  outline: none
+
+/* Шапка сайта */
+/* Head menu line*/
+.head-menu-line
+  border-bottom: 1px solid $hml-clr-bt
+  max-height: 38px
+
+.head-slogan
+  padding-top: 7px
+  p
+    display: inline-block
+    color: $slog-blue
+    &:first-child
+      padding-right: 10px
+      color: $red
+
+.showsm
+  display: none
+
+.head-login
+  background: url(../img/icon_account.png) 0 9px no-repeat
+  padding-top: 8px
+  padding-bottom: 7px
+  padding-left: 24px
+  font-size: 13px
+  color: $black
+  a
+    color: $black
+
+.head-cart.showsm
+  display: block
+
+#boxCart
+  padding-top: 6px
+  .dropdown
+    text-align: right
+  .dropdown-menu
+    font-size: 14px
+    left: auto
+    right: 0
+    top: 31px
+    width: 262px
+    border-radius: 0
+    border: none
+    box-shadow: 1px 3px 15px 0px rgba(0, 0, 0, 0.15)
+    padding: 0
+
+.btn-cart
+  // float: right
+  text-align: left
+  background: url(../img/icon_cart.png) 0 0 no-repeat
+  padding: 1px 0 2px 30px
+  font-size: 13px
+  color: $black
+  &:hover
+    color: $red
+  &:focus
+    color: $red
+    &:active
+      color: $red
+  &.active:focus
+    color: $red
+  &.focus
+    color: $red
+    &:active
+      color: $red
+  .cart-head-count
+    font-size: 11px
+    color: $red
+
+.dropdown-toggle::after
+  display: none
+
+.btn.focus, .btn:focus
+  box-shadow: none
+
+.cartempty
+  padding: 14px
+
+
+
+  /*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px)
+  /* Шапка сайта*/ 
+  .head-menu-line
+    max-height: 58px
+
+  .head-slogan
+    p
+      &:first-child
+        margin-bottom: 0
+
+  .head-login
+    margin-top: 10px
+
+  .head-cart
+    margin-top: 10px
+
+// /* Medium Devices, Desktops */
+// @media only screen and (max-width : 991px)
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px)
+  /*Шапка сайта*/
+  .head-login
+    margin-top: 5px
+
+  .head-cart
+    margin-top: 5px
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 479px)
+  /*Шапка сайта*/
+  .hiddsm
+    display: none
+
+  .showsm
+    display: block
+
+  .telhsm
+    font-weight: bold
+    font-size: 20px
+  
+  .head-tel
+    margin-top: 10px
+
+  .cart-head-text, .cart-head-count
+    display: block
+
+// /* Custom, iPhone Retina */
+// @media only screen and (max-width : 320px)
+//   /**/
