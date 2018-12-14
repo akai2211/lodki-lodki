@@ -1,9 +1,11 @@
 // Цвета 
 $black: #000000 // Основной цвет текста
+$white: #ffffff // Белей цвет
 $hml-clr-bt: #e8e8e8 // Полоска head-menu-line
 $slog-blue: #039 // синий цвет текста 
 $red: #c00 // красный цвет текста
 $link-default: #333333 // ссылки по умолчанию
+$time-work: #999999 // время работы в шапке
 
 body
   font-family: 'Open Sans', sans-serif
@@ -61,7 +63,6 @@ a
     padding: 0
 
 .btn-cart
-  // float: right
   text-align: left
   background: url(../img/icon_cart.png) 0 0 no-repeat
   padding: 1px 0 2px 30px
@@ -92,6 +93,67 @@ a
 .cartempty
   padding: 14px
 
+/*Логотип, адрес, телефон, обратка*/
+.head-logo
+  padding-top: 20px
+  padding-bottom: 30px
+
+.head-address
+  padding-top: 15px
+  padding-bottom: 5px
+
+.address
+  padding: 0 0 5px 30px
+  background: url(../img/icon_map.png) 0 2px no-repeat
+  font-size: 16px
+
+.head-work
+  font-size: 11px
+  padding-top: 2px
+  color: $time-work
+  font-weight: 400
+  a
+    color: $red
+    text-decoration: underline
+    &:hover
+      text-decoration: none
+  &.red
+    color: $red
+
+.head-phone
+  padding-top: 20px
+  padding-bottom: 20px
+  .telnumber
+    font-size: 16px
+    font-weight: 700
+    display: inline-block
+    float: left
+    &:first-child
+      padding: 0 0 0 30px
+      background: url(../img/icon_phone.png) 0 2px no-repeat
+      margin-left: 20px
+    .separator
+      color: $time-work
+      padding: 0 10px
+
+.head-callback
+  padding-top: 30px
+  padding-bottom: 25px
+  a
+    font-size: 14px
+
+.btn
+  margin-bottom: 5px
+  border-radius: 4px
+  &:hover
+    background: #083289
+    border-color: #083289
+
+.btn-primary
+  background: $red
+  border-color: $red
+  color: $white
+
 
 
   /*==========  Desktop First  ==========*/
@@ -113,9 +175,24 @@ a
   .head-cart
     margin-top: 10px
 
-// /* Medium Devices, Desktops */
-// @media only screen and (max-width : 991px)
+  /*Логотип, адрес, телефон, обратка*/
+  .head-phone
+    padding: 20px 0
+    .telnumber
+      .separator
+        padding: 0 6px
 
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px)
+  /*Логотип, адрес, телефон, обратка*/
+  .head-logo
+    text-align: center
+    padding-top: 15px
+    padding-bottom: 0
+
+  .head-phone
+    padding-top: 10px
+    padding-bottom: 15px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -125,6 +202,10 @@ a
 
   .head-cart
     margin-top: 5px
+  /*Логотип, адрес, телефон, обратка*/
+  .head-callback
+    padding-top: 10px
+    padding-bottom: 5px
 
 
 /* Extra Small Devices, Phones */
@@ -146,6 +227,8 @@ a
   .cart-head-text, .cart-head-count
     display: block
 
-// /* Custom, iPhone Retina */
-// @media only screen and (max-width : 320px)
-//   /**/
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+  /**/
+  .head-phone .telnumber .separator
+    padding: 0
