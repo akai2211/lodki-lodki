@@ -100,6 +100,100 @@
           <!-- /.row -->
         </div>
         <!-- /.container -->
+        <!-- Главное меню -->
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="head-menu-wrapper">
+                <div class="col-sm-10 col-lg-3 col-xl-3 pull-right head-search">
+                  <!-- Бокс поиск -->
+                  <div class="boxSearch">
+                    <div class="boxSearchContent">
+                      <div class="form-inline">
+                        <div itemscope itemtype="http://schema.org/WebSite">
+                          <span itemprop="url" content="/"></span>
+                          <div itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+                          <meta itemprop="target" content="https://lodki-lodki.ru/advanced_search_result.php?keywords={keywords}&op=Найти"/>
+                            <form name="quick_find" id="quick_find" action="advanced_search_result.php" method="get">
+
+                              <span class="col-sm-10 col-lg-10 col-xl-11 searchboxform">
+                                <input class="form-control" type="text" name="keywords" id="quick_find_keyword" itemprop="query-input" />
+                              </span>
+
+                              <span class="col-sm-2 col-lg-2 col-xl-1 searchboxlabel">
+                                <label>
+                                  <i class="fa fa-search"></i><button type="submit" class="btn btn-primary">Искать</button>
+                                </label>
+                              </span>
+                              <div class="ajaxQuickFind" id="ajaxQuickFind" style="text-align: left;"></div>
+
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <script>
+                      // <![CDATA[
+                      
+                      $(document).ready(function(){
+                        $("#quick_find_keyword").keyup(function(){
+                            var searchString = $("#quick_find_keyword").val(); 
+                            $.ajax({
+                              url: "index_ajax.php",             
+                              dataType : "html",
+                              type: "POST",
+                              data: "q=includes/modules/ajax/ajaxQuickFind.php&keywords="+searchString,
+                              success: function(msg){$("#ajaxQuickFind").html(msg);}            
+                        });     
+                          });
+                      })
+                      
+                      // ]]>
+                      </script>
+
+                    </div>
+                  </div>
+                  <!-- /Бокс поиск -->
+                </div>
+
+                <!-- общее меню -->
+                <nav class="navbar navbar-expand-md">
+                  <div class="navbar-header">
+                    <!-- <button class="navbar-toggler hidden-md-up" data-toggle="collapse" data-target="#collapse-menu">
+                      &#9776;
+                    </button> -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse-menu" aria-controls="collapse-menu" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  </div>
+                  <div class="collapse navbar-collapse" id="collapse-menu">
+                    <ul class="navbar-nav mr-auto head-menu">
+                      <li class="hidden-sm hidden-md"><a href="/">Главная</a></li>
+                      
+                      <!-- Бокс разделы со всплывающими подменю -->
+                      <li class="dropdown" id="boxCategories2"><a href="#" class="dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Каталог</a><div class="d-mob-menu-icon-main"></div>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><ul id="navmenu-v"><li><a href="/komplekty-lodkamotor.html">Комплекты лодка+мотор</a></li><li><a href="/lodki-po-tipu.html">Лодки по типу</a><div class="d-mob-menu-icon"></div><ul class="hidden"><li><a href="/grebnye.html">Гребные лодки</a></li><li><a href="/lodki-pvh-pod-motor.html">Лодки ПВХ под мотор</a></li><li><a href="/grebnye-s-navesnym-trancem.html">Гребные с навесным транцем</a></li><li><a href="/s-naduvnym-dnom.html">Лодки с надувным дном</a></li><li><a href="/s-naduvnym-kilem.html">Лодки с надувным килем</a></li><li><a href="/lodki-ndnd.html">Лодки НДНД</a></li><li><a href="/naduvnye-lodki.html">Надувные лодки</a></li><li><a href="/plastikovye-pod-motor.html">Пластиковые лодки под мотор</a></li></ul></li><li><a href="/lodochnie-motory.html">Лодочные моторы</a><div class="d-mob-menu-icon"></div><ul class="hidden"><li><a href="/motory/elektricheskie.html">Электромоторы</a><div class="d-mob-menu-icon"></div><ul class="hidden"><li><a href="/flover.html">Flover (Южная Корея)</a></li></ul></li><li><a href="/motory/benzinovye-vse.html">Бензиновые ВСЕ</a></li><li><a href="/benzinovye-2-h-taktnye.html">Бензиновые 2-х тактные</a></li><li><a href="/motory/benzinovye-4-h-taktnye.html">Бензиновые 4-х тактные</a></li><li><a href="/benzinovye.html">Бензиновые по брендам</a><div class="d-mob-menu-icon"></div><ul class="hidden"><li><a href="/jet-marine.html">Jet Marine</a></li><li><a href="/lodochnie-motory-ns-nissan-marine.html">Nissan Marine</a></li><li><a href="/lodochnie-motory-hdx.html">HDX</a></li></ul></li><li><a href="/benzinovye-po-moschnosti.html">Бензиновые по мощности</a><div class="d-mob-menu-icon"></div><ul class="hidden"><li><a href="/26-ls.html">2,6 л.с.</a></li><li><a href="/36-ls.html">3,6 л.с.</a></li><li><a href="/benzinovye-po-moschnosti/5-ls.html">5 л.с.</a></li><li><a href="/98-ls.html">9.8 л.с.</a></li><li><a href="/99-ls.html">9,9 л.с.</a></li><li><a href="/15-ls.html">Более 15 л.с.</a></li></ul></li></ul></li><li><a href="/lodki-po-proizvoditelju.html">Лодки по производителю</a><div class="d-mob-menu-icon"></div><ul class="hidden"><li><a href="/lodki-apache.html">Лодки Apache (Апаче)</a></li><li><a href="/lodki-akva-master-lodok.html">Лодки Аква (Мастер лодок)</a></li><li><a href="/lodki-rivera-.html">Лодки Ривьера</a></li><li><a href="/lodki-hanter.html">Лодки Хантер</a></li><li><a href="/lodki-admiral.html">Лодки Адмирал</a></li><li><a href="/lodki-briz.html">Лодки БРИЗ</a></li><li><a href="/lodki-velbot.html">Лодки  Вельбот</a></li><li><a href="/lodki-kovcheg.html">Лодки Ковчег</a></li><li><a href="/lodki-mnev-i-ko-kajman.html">Лодки Мнев и Ко (Кайман)</a></li><li><a href="/lodki-norvik.html">Лодки Норвик</a></li><li><a href="/lodki-pelican.html">Лодки Пеликан</a></li><li><a href="/lodki-posejdon.html">Лодки Посейдон</a></li><li><a href="/lodki-roskon.html">Лодки РОСКОН</a></li><li><a href="/lodki-uphimskie-uzjemik.html">Лодки Уфимские (УЗЭМИК)</a></li><li><a href="/lodki-phlagman.html">Лодки Флагман</a></li><li><a href="/lodki-flinc.html">Лодки Флинк (Flinc)</a></li><li><a href="/lodki-phregat.html">Лодки Фрегат</a></li><li><a href="/lodki-shtorm.html">Лодки Шторм</a></li><li><a href="/lodki-jukona-yukona.html">Лодки Юкона (Yukona)</a></li><li><a href="/lodki-bark.html">Лодки Bark</a></li><li><a href="/lodki-bestway.html">Лодки BestWay</a></li><li><a href="/lodki-boatmaster.html">Лодки BoatMaster</a></li><li><a href="/hdx-lodki.html">Лодки HDX</a></li><li><a href="/lodki-intex.html">Лодки Intex</a></li></ul></li><li><a href="/lodki-po-cene.html">Лодки по цене</a><div class="d-mob-menu-icon"></div><ul class="hidden"><li><a href="/do-5000-rub.html">До 5.000 руб.</a></li><li><a href="/ot-5000-do-10000-rub.html">От 5.000 до 10.000 руб</a></li><li><a href="/ot-10000-do-15000-rub.html">От 10.000 до 15.000 руб</a></li><li><a href="/ot-15000-rub.html">От 15.000 руб</a></li></ul></li><li><a href="/lodki-po-materialu.html">Лодки по материалу</a><div class="d-mob-menu-icon"></div><ul class="hidden"><li><a href="/pvh.html">Надувные лодки ПВХ</a></li><li><a href="/naduvnye-rezinovye.html">Резиновые лодки</a></li></ul></li><li><a href="/aksessuary.html">Аксессуары</a><div class="d-mob-menu-icon"></div><ul class="hidden"><li><a href="/derzhatel-udilischa.html">Держатель удилища</a></li><li><a href="/kolesa-dlja-lodok.html">Колеса для лодок</a></li><li><a href="/maslo-.html">Масло</a></li><li><a href="/naduvnye-kresla.html">Надувные кресла</a></li><li><a href="/nakladki-na-banki.html">Накладки на банки</a></li><li><a href="/nasosy.html">Насосы</a></li><li><a href="/slani-dlja-lodok.html">Слани для лодок</a></li><li><a href="/spasatelnye-zhilety.html">Спасательные жилеты</a></li><li><a href="/tenty-transphormery-nosovye.html">Тенты трансформеры, носовые</a></li><li><a href="/chehly-dlja-motorov.html">Чехлы для моторов</a></li><li><a href="/jakorja.html">Якоря</a></li><li><a href="/trancy.html">Транцы</a></li><li><a href="/remkomplekty.html">Ремкомплекты</a></li><li><a href="/vesla.html">Весла</a></li><li><a href="/vinty-dlya-lodochnyh-motorov-hdx-parsun.html">Винты</a></li></ul></li></ul></ul>
+                      </li>
+                      <!-- /Бокс разделы  со всплывающими подменю -->
+
+                      <li><a href="about.html">О компании</a></li>
+                      <li><a href="dostavka-i-oplata.html">Доставка и оплата</a></li>
+                      <li><a href="garantija-i-vozvrat.html">Гарантия и возврат</a></li>
+                      <li class="hidden-sm"><a href="/obratnaya-svyaz.html">Свяжитесь с нами</a></li>
+                      <li><a href="/kontakty.html">Контакты</a></li>
+                    
+                    </ul>
+                  </div>
+                </nav>
+
+
+              </div>
+              <!-- /.head-menu-wrapper -->
+            </div>
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
 
       </div>
       <!-- /.navbar -->
@@ -109,6 +203,7 @@
     </header>
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&amp;amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="/css/font-awesome.css">
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script

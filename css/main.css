@@ -163,13 +163,15 @@ a {
 .head-phone {
   padding-top: 20px;
   padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .head-phone .telnumber {
   font-size: 16px;
   font-weight: 700;
   display: inline-block;
-  float: left;
 }
 
 .head-phone .telnumber:first-child {
@@ -206,7 +208,80 @@ a {
   background: #c00;
   border-color: #c00;
   color: #ffffff;
+}
+
+/*Главное меню*/
+.head-menu-wrapper {
+  background: #083289;
+  border-radius: 2px;
+}
+
+/*Бокс поиска*/
+.head-search {
+  padding: 8px 8px 0 8px;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.boxSearch {
+  padding: 0;
+  height: 28px;
+  position: relative;
+}
+
+.boxSearchContent {
+  border-radius: 2px;
+  background: #ffffff;
+  padding: 2px;
+}
+
+.boxSearchContent .btn {
+  display: none;
+}
+
+.boxSearchContent .searchboxlabel {
+  padding: 0;
+}
+
+.boxSearchContent .searchboxform {
+  padding: 0;
+}
+
+.boxSearchContent .searchboxform input {
+  border: none;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 86%;
+  height: 24px;
+}
+
+.boxSearchContent label {
+  float: right;
+  display: block;
+  height: 24px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #083289;
+  width: 24px;
+  text-align: center;
+  margin: 0;
+}
+
+.boxSearchContent label:hover {
+  cursor: pointer;
+  color: #212121;
+}
+
+/*общее меню*/
+.head-menu {
   /*==========  Desktop First  ==========*/
+}
+
+.head-menu a {
+  color: #ffffff;
 }
 
 /* Large Devices, Wide Screens */

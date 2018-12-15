@@ -6,6 +6,7 @@ $slog-blue: #039 // синий цвет текста
 $red: #c00 // красный цвет текста
 $link-default: #333333 // ссылки по умолчанию
 $time-work: #999999 // время работы в шапке
+$accent: #083289 // основной цвет
 
 body
   font-family: 'Open Sans', sans-serif
@@ -123,11 +124,11 @@ a
 .head-phone
   padding-top: 20px
   padding-bottom: 20px
+  display: flex
   .telnumber
     font-size: 16px
     font-weight: 700
     display: inline-block
-    float: left
     &:first-child
       padding: 0 0 0 30px
       background: url(../img/icon_phone.png) 0 2px no-repeat
@@ -146,13 +147,64 @@ a
   margin-bottom: 5px
   border-radius: 4px
   &:hover
-    background: #083289
-    border-color: #083289
+    background: $accent
+    border-color: $accent
 
 .btn-primary
   background: $red
   border-color: $red
   color: $white
+
+/*Главное меню*/
+.head-menu-wrapper
+  background: $accent
+  border-radius: 2px
+/*Бокс поиска*/
+.head-search
+  padding: 8px 8px 0 8px
+
+.pull-right
+  float: right!important
+
+.boxSearch
+  padding: 0
+  height: 28px
+  position: relative
+
+.boxSearchContent
+  border-radius: 2px
+  background: $white
+  padding: 2px
+  .btn
+    display: none
+  .searchboxlabel
+    padding: 0
+  .searchboxform
+    padding: 0
+    input
+      border: none
+      background: none
+      box-shadow: none
+      width: 86%
+      height: 24px
+  label
+    float: right
+    display: block
+    height: 24px
+    font-size: 14px
+    line-height: 24px
+    color: #083289
+    width: 24px
+    text-align: center
+    margin: 0
+    &:hover
+      cursor: pointer
+      color: #212121
+
+/*общее меню*/
+.head-menu
+  a
+    color: $white
 
 
 
