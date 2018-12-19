@@ -8,199 +8,273 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Main CSS -->
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Надувные лодки для рыбалки по доступным ценам в Москве | Купить недорого надувную лодку в интернет-магазине Lodki-lodki.ru</title>
   </head>
   <body>
     
     <!-- Шапка сайта -->
     <header>
-
-      <div class="navbar-light">
-        <div class="head-menu-line">
-          <div class="container">
+      <div class="head">
+        <div class="container">
             <div class="row">
-              <!-- слоган -->
-              <div class="d-none d-md-block col-sm-12 col-md-7 col-lg-7 col-xl-8 head-slogan">
-                <p>Крупнейший магазин надувных лодок в России!</p>
-                <p>Всегда приятные цены!  Доставка во все регионы!</p>
+              <!-- Слоган -->
+              <div class="col-xl-8 col-lg-7 col-md-7 d-md-block d-none">
+                <div class="head-slogan">
+                  <p>Крупнейший магазин надувных лодок в России!</p>
+                  <p>Всегда приятные цены!  Доставка во все регионы!</p>
+                </div>
               </div>
-              <!-- аккаунт -->
-              <div class="col-8 col-sm-8 col-md-3 col-lg-3 col-xl-2 head-tel showsm">
-                <img src="/img/icon_phone.png">
-                <a class="telhsm" href="tel:84957291360">8(495) 729-13-60</a>
+              <!-- Форма регистрации -->
+              <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6">
+                <div class="head-login">
+                  <i class="fa fa-user-o" aria-hidden="true"></i>
+                  <a href="#" rel="nofollow">Регистрация</a> /
+                  <a href="#" rel="nofollow">Вход</a>
+                </div>
               </div>
-
-              <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-2 head-login hiddsm">
-                  <a href="create_account.html" rel="nofollow">Регистрация</a> /
-                  <a href="login.html" rel="nofollow">Вход</a>
-              </div>
-
-              <!-- корзина -->
-              <div class="offset-0 col-4 offset-sm-2 col-sm-4 offset-md-0 col-md-2 col-lg-2 col-xl-2 head-cart showsm" >
-                <div class="head-cart-block">
-                
-                  <!-- Бокс корзина -->
-                  <div id="divShoppingCart">
-                    <div id="boxCart">
-                      <div class="dropdown">
-                        <button class="btn btn-cart dropdown-toggle" type="button" data-toggle="dropdown"><span class="cart-head-text">Корзина</span><span class="cart-head-count">(пусто)</span></button>
-                        <div class="dropdown-menu">
-
-                        <!-- Пустая корзина --> 
-                        <div class="cartempty">Корзина пуста.</div>
-                        
-                        </div>
-                      </div>
-                    </div>
+              <!-- Корзина -->
+              <div class="col-xl-2 col-lg-2 col-md-2 col-sm-6 col-6">
+                <div class="head-cart float-right">
+                  <button type="button" id="cart-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Корзина <span>(пусто)</span>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="cart-dropdown">
+                    <div class="cart-empty">Корзина пуста</div>
                   </div>
-                <!-- /Бокс корзина -->
                 </div>
               </div>
 
             </div>
             <!-- /.row -->
-          </div>
-          <!-- /.container -->
         </div>
-        <!-- /.head-menu-line -->
-        <!-- Логотип, адрес, телефон, обратка -->
+        <!-- /.conteiner -->
+      </div>
+      <!-- /.head -->
+      <!-- head-contacts -->
+      <div class="head-c">
         <div class="container">
           <div class="row">
             <!-- Логотип -->
-            <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 head-logo">
-              <a href="/"><img src="/img/logo.png" alt="Лодки ПВХ и Резиновые" title="Лодки ПВХ и Резиновые" /></a>
+            <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+              <div class="head-c-logo">
+                  <a href="/"><img src="img/logo.png" alt="Лодки ПВХ и Резиновые" title="Лодки ПВХ и Резиновые" /></a>
+              </div>
             </div>
-            <!-- адрес -->
-            <div class="col-sm-12 col-md-3 col-lg-2 col-xl-3 head-address">
-              <div class="address">г.Москва, ул.Тимирязевская д.2/3 (Пн-Вс: 10.00-20.00)
-                <div class="head-work">
-                  <a href="/kontakty.html">Схема проезда</a>
+            <!-- Адрес -->
+            <div class="col-xl-3 col-lg-2 col-md-3 col-sm-12">
+              <div class="head-c-address">г.Москва, ул.Тимирязевская д.2/3 (Пн-Вс: 10.00-20.00)
+                <a href="#">Схема проезда</a>
+              </div>
+            </div>
+            <!-- Телефоны -->
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+              <div class="head-c-phone">
+                <div class="head-c-tel">
+                  <a href="tel:84957291360">8(495) 729-13-60</a> <span class="separator">/</span>
+                  <div class="head-c-work">Пн-Вс: 10.00-20.00</div>
+                </div>
+                <div class="head-c-tel">
+                  <a href="tel:88003331795">8-800-333-17-95</a>
+                  <div class="head-c-work red">Звонок по России<br />бесплатный</div>
                 </div>
               </div>
             </div>
-            <!-- телефон -->
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 head-phone">
-              <div class="telnumber">
-                <a href="tel:84957291360">8(495) 729-13-60</a> <span class="separator">/</span>
-                <div class="head-work">Пн-Вс: 10.00-20.00</div>
-              </div>
-              <div class="telnumber">
-                <a href="tel:88003331795">8-800-333-17-95</a>
-                <div class="head-work red">Звонок по России<br />бесплатный</div>
+            <!-- Обратка -->
+            <div class="col-xl-2 col-lg-3 col-md-3 col-sm-12">
+              <div class="head-c-callback">
+                <a href="#" class="btn btn-danger btn-block">Обратный звонок</a>
               </div>
             </div>
-            <!-- Обратный звонок -->
-            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2">
-              <div class="head-callback">
-                <a href="call_back.php" class="btn btn-primary btn-block callback">Обратный звонок</a>
-              </div>
-            </div>
+
           </div>
           <!-- /.row -->
         </div>
         <!-- /.container -->
-        <!-- Главное меню -->
+      </div>
+      <!-- /.head-c -->
+      <!-- Главное меню -->
+      
+        
         <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="head-menu-wrapper">
-                <div class="col-sm-10 col-lg-3 col-xl-3 pull-right head-search">
-                  <!-- Бокс поиск -->
-                  <div class="boxSearch">
-                    <div class="boxSearchContent">
-                      <div class="form-inline">
-                        <div itemscope itemtype="http://schema.org/WebSite">
-                          <span itemprop="url" content="/"></span>
-                          <div itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
-                          <meta itemprop="target" content="https://lodki-lodki.ru/advanced_search_result.php?keywords={keywords}&op=Найти"/>
-                            <form name="quick_find" id="quick_find" action="advanced_search_result.php" method="get">
+          <div class="head-menu">
+            <div class="row">
 
-                              <span class="col-sm-10 col-lg-10 col-xl-11 searchboxform">
-                                <input class="form-control" type="text" name="keywords" id="quick_find_keyword" itemprop="query-input" />
-                              </span>
+              <!-- поиск -->
+              <div class="col-xl-3 col-lg-3 col-md-10 col-sm-10 col-10 offset-md-2 offset-lg-0 order-lg-2 order-md-1 order-2">
+                
+                <div class="head-menu-search">
 
-                              <span class="col-sm-2 col-lg-2 col-xl-1 searchboxlabel">
-                                <label>
-                                  <i class="fa fa-search"></i><button type="submit" class="btn btn-primary">Искать</button>
-                                </label>
-                              </span>
-                              <div class="ajaxQuickFind" id="ajaxQuickFind" style="text-align: left;"></div>
+                  <nav class="navbar">
 
-                            </form>
-                          </div>
-                        </div>
-                      </div>
+                    <form class="form-inline">
+                      <input class="form-control mr-sm-2" type="search"  aria-label="Search">
                       
-                      <script>
-                      // <![CDATA[
-                      
-                      $(document).ready(function(){
-                        $("#quick_find_keyword").keyup(function(){
-                            var searchString = $("#quick_find_keyword").val(); 
-                            $.ajax({
-                              url: "index_ajax.php",             
-                              dataType : "html",
-                              type: "POST",
-                              data: "q=includes/modules/ajax/ajaxQuickFind.php&keywords="+searchString,
-                              success: function(msg){$("#ajaxQuickFind").html(msg);}            
-                        });     
-                          });
-                      })
-                      
-                      // ]]>
-                      </script>
+                      <button class="btn my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
 
-                    </div>
-                  </div>
-                  <!-- /Бокс поиск -->
+                  </nav>
+
                 </div>
+                <!-- /.head-menu-search -->
 
-                <!-- общее меню -->
-                <nav class="navbar navbar-expand-md">
-                  <div class="navbar-header">
-                    <!-- <button class="navbar-toggler hidden-md-up" data-toggle="collapse" data-target="#collapse-menu">
-                      &#9776;
-                    </button> -->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse-menu" aria-controls="collapse-menu" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                  </div>
-                  <div class="collapse navbar-collapse" id="collapse-menu">
-                    <ul class="navbar-nav mr-auto head-menu">
-                      <li class="hidden-sm hidden-md"><a href="/">Главная</a></li>
-                      
+              </div>
+
+              <!-- меню -->
+              <div class="col-xl-9 col-lg-9 col-md-12 col-sm-2 col-2 order-lg-1 order-md-2 order-1">
+
+                <nav class="navbar navbar-expand-md head-menu-main">
+                  <button class="navbar-toggler humburger" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                      <li>
+                        <a href="#">Главная</span></a>
+                      </li>
+
                       <!-- Бокс разделы со всплывающими подменю -->
-                      <li class="dropdown" id="boxCategories2"><a href="#" class="dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Каталог</a><div class="d-mob-menu-icon-main"></div>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown"><ul id="navmenu-v"><li><a href="/komplekty-lodkamotor.html">Комплекты лодка+мотор</a></li><li><a href="/lodki-po-tipu.html">Лодки по типу</a><div class="d-mob-menu-icon"></div><ul class="hidden"><li><a href="/grebnye.html">Гребные лодки</a></li><li><a href="/lodki-pvh-pod-motor.html">Лодки ПВХ под мотор</a></li><li><a href="/grebnye-s-navesnym-trancem.html">Гребные с навесным транцем</a></li><li><a href="/s-naduvnym-dnom.html">Лодки с надувным дном</a></li><li><a href="/s-naduvnym-kilem.html">Лодки с надувным килем</a></li><li><a href="/lodki-ndnd.html">Лодки НДНД</a></li><li><a href="/naduvnye-lodki.html">Надувные лодки</a></li><li><a href="/plastikovye-pod-motor.html">Пластиковые лодки под мотор</a></li></ul></li><li><a href="/lodochnie-motory.html">Лодочные моторы</a><div class="d-mob-menu-icon"></div><ul class="hidden"><li><a href="/motory/elektricheskie.html">Электромоторы</a><div class="d-mob-menu-icon"></div><ul class="hidden"><li><a href="/flover.html">Flover (Южная Корея)</a></li></ul></li><li><a href="/motory/benzinovye-vse.html">Бензиновые ВСЕ</a></li><li><a href="/benzinovye-2-h-taktnye.html">Бензиновые 2-х тактные</a></li><li><a href="/motory/benzinovye-4-h-taktnye.html">Бензиновые 4-х тактные</a></li><li><a href="/benzinovye.html">Бензиновые по брендам</a><div class="d-mob-menu-icon"></div><ul class="hidden"><li><a href="/jet-marine.html">Jet Marine</a></li><li><a href="/lodochnie-motory-ns-nissan-marine.html">Nissan Marine</a></li><li><a href="/lodochnie-motory-hdx.html">HDX</a></li></ul></li><li><a href="/benzinovye-po-moschnosti.html">Бензиновые по мощности</a><div class="d-mob-menu-icon"></div><ul class="hidden"><li><a href="/26-ls.html">2,6 л.с.</a></li><li><a href="/36-ls.html">3,6 л.с.</a></li><li><a href="/benzinovye-po-moschnosti/5-ls.html">5 л.с.</a></li><li><a href="/98-ls.html">9.8 л.с.</a></li><li><a href="/99-ls.html">9,9 л.с.</a></li><li><a href="/15-ls.html">Более 15 л.с.</a></li></ul></li></ul></li><li><a href="/lodki-po-proizvoditelju.html">Лодки по производителю</a><div class="d-mob-menu-icon"></div><ul class="hidden"><li><a href="/lodki-apache.html">Лодки Apache (Апаче)</a></li><li><a href="/lodki-akva-master-lodok.html">Лодки Аква (Мастер лодок)</a></li><li><a href="/lodki-rivera-.html">Лодки Ривьера</a></li><li><a href="/lodki-hanter.html">Лодки Хантер</a></li><li><a href="/lodki-admiral.html">Лодки Адмирал</a></li><li><a href="/lodki-briz.html">Лодки БРИЗ</a></li><li><a href="/lodki-velbot.html">Лодки  Вельбот</a></li><li><a href="/lodki-kovcheg.html">Лодки Ковчег</a></li><li><a href="/lodki-mnev-i-ko-kajman.html">Лодки Мнев и Ко (Кайман)</a></li><li><a href="/lodki-norvik.html">Лодки Норвик</a></li><li><a href="/lodki-pelican.html">Лодки Пеликан</a></li><li><a href="/lodki-posejdon.html">Лодки Посейдон</a></li><li><a href="/lodki-roskon.html">Лодки РОСКОН</a></li><li><a href="/lodki-uphimskie-uzjemik.html">Лодки Уфимские (УЗЭМИК)</a></li><li><a href="/lodki-phlagman.html">Лодки Флагман</a></li><li><a href="/lodki-flinc.html">Лодки Флинк (Flinc)</a></li><li><a href="/lodki-phregat.html">Лодки Фрегат</a></li><li><a href="/lodki-shtorm.html">Лодки Шторм</a></li><li><a href="/lodki-jukona-yukona.html">Лодки Юкона (Yukona)</a></li><li><a href="/lodki-bark.html">Лодки Bark</a></li><li><a href="/lodki-bestway.html">Лодки BestWay</a></li><li><a href="/lodki-boatmaster.html">Лодки BoatMaster</a></li><li><a href="/hdx-lodki.html">Лодки HDX</a></li><li><a href="/lodki-intex.html">Лодки Intex</a></li></ul></li><li><a href="/lodki-po-cene.html">Лодки по цене</a><div class="d-mob-menu-icon"></div><ul class="hidden"><li><a href="/do-5000-rub.html">До 5.000 руб.</a></li><li><a href="/ot-5000-do-10000-rub.html">От 5.000 до 10.000 руб</a></li><li><a href="/ot-10000-do-15000-rub.html">От 10.000 до 15.000 руб</a></li><li><a href="/ot-15000-rub.html">От 15.000 руб</a></li></ul></li><li><a href="/lodki-po-materialu.html">Лодки по материалу</a><div class="d-mob-menu-icon"></div><ul class="hidden"><li><a href="/pvh.html">Надувные лодки ПВХ</a></li><li><a href="/naduvnye-rezinovye.html">Резиновые лодки</a></li></ul></li><li><a href="/aksessuary.html">Аксессуары</a><div class="d-mob-menu-icon"></div><ul class="hidden"><li><a href="/derzhatel-udilischa.html">Держатель удилища</a></li><li><a href="/kolesa-dlja-lodok.html">Колеса для лодок</a></li><li><a href="/maslo-.html">Масло</a></li><li><a href="/naduvnye-kresla.html">Надувные кресла</a></li><li><a href="/nakladki-na-banki.html">Накладки на банки</a></li><li><a href="/nasosy.html">Насосы</a></li><li><a href="/slani-dlja-lodok.html">Слани для лодок</a></li><li><a href="/spasatelnye-zhilety.html">Спасательные жилеты</a></li><li><a href="/tenty-transphormery-nosovye.html">Тенты трансформеры, носовые</a></li><li><a href="/chehly-dlja-motorov.html">Чехлы для моторов</a></li><li><a href="/jakorja.html">Якоря</a></li><li><a href="/trancy.html">Транцы</a></li><li><a href="/remkomplekty.html">Ремкомплекты</a></li><li><a href="/vesla.html">Весла</a></li><li><a href="/vinty-dlya-lodochnyh-motorov-hdx-parsun.html">Винты</a></li></ul></li></ul></ul>
+                      <li class="d-sm-block d-md-none dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Каталог</a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a href="#">Комплекты лодка+мотор</a>
+                          </li>
+                        </ul>
                       </li>
                       <!-- /Бокс разделы  со всплывающими подменю -->
 
-                      <li><a href="about.html">О компании</a></li>
-                      <li><a href="dostavka-i-oplata.html">Доставка и оплата</a></li>
-                      <li><a href="garantija-i-vozvrat.html">Гарантия и возврат</a></li>
-                      <li class="hidden-sm"><a href="/obratnaya-svyaz.html">Свяжитесь с нами</a></li>
-                      <li><a href="/kontakty.html">Контакты</a></li>
-                    
+                      <li>
+                        <a href="#">О компании</a>
+                      </li>
+                      <li>
+                        <a href="#">Доставка и оплата</a>
+                      </li>
+                      <li>
+                        <a href="#">Гарантия и возврат</a>
+                      </li>
+                      <li>
+                        <a href="#">Свяжитесь с нами</a>
+                      </li>
+                      <li>
+                        <a href="#">Контакты</a>
+                      </li>
                     </ul>
                   </div>
                 </nav>
 
-
               </div>
-              <!-- /.head-menu-wrapper -->
+
             </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.head-menu -->
+        </div>
+        <!-- /.container -->
+
+      <!-- Категории -->
+      <div class="head-categorys">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+              <div class="category-block">
+                <a href="#">
+                  <div class="category-block-img">
+                    <img src="img/pump-boat.png" alt="Лодки с надувным дном">
+                  </div>
+                  <div class="category-block-name">Лодки с надувным дном</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+              <div class="category-block">
+                <a href="#">
+                  <div class="category-block-img">
+                    <img src="img/rowing-boat.png" alt="Гребные лодки">
+                  </div>
+                  <div class="category-block-name">Гребные лодки</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+              <div class="category-block">
+                <a href="#">
+                  <div class="category-block-img">
+                    <img src="img/transom-boat.png" alt="Лодки с навесным транцем">
+                  </div>
+                  <div class="category-block-name">Лодки с навесным транцем</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+              <div class="category-block">
+                <a href="#">
+                  <div class="category-block-img">
+                    <img src="img/motor-boat.png" alt="Лодки ПВХ под мотор">
+                  </div>
+                  <div class="category-block-name">Лодки ПВХ под мотор</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+              <div class="category-block">
+                <a href="#">
+                  <div class="category-block-img">
+                    <img src="img/ndnd-boat.png" alt="Лодки НДНД">
+                  </div>
+                  <div class="category-block-name">Лодки НДНД</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+              <div class="category-block">
+                <a href="#">
+                  <div class="category-block-img">
+                    <img src="img/board-motor.png" alt="Лодочные моторы">
+                  </div>
+                  <div class="category-block-name">Лодочные моторы</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+              <div class="category-block">
+                <a href="#">
+                  <div class="category-block-img">
+                    <img src="img/accessories.png" alt="Аксессуары">
+                  </div>
+                  <div class="category-block-name">Аксессуары</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+              <div class="category-block">
+                <a href="#">
+                  <div class="category-block-img">
+                    <img src="img/complects.png" alt="Комплекты лодка+мотор">
+                  </div>
+                  <div class="category-block-name">Комплекты лодка+мотор</div>
+                </a>
+              </div>
+            </div>
+            
           </div>
           <!-- /.row -->
         </div>
         <!-- /.container -->
-
       </div>
-      <!-- /.navbar -->
-      
-      
-
+      <!-- /.head-categorys -->
     </header>
+
+
+
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&amp;amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="/css/font-awesome.css">
@@ -213,6 +287,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <!-- Main JS -->
-    <script src="/js/common.js"></script>
+    <script src="js/common.js"></script>
   </body>
 </html>

@@ -1,12 +1,15 @@
 // Цвета 
 $black: #000000 // Основной цвет текста
 $white: #ffffff // Белей цвет
-$hml-clr-bt: #e8e8e8 // Полоска head-menu-line
-$slog-blue: #039 // синий цвет текста 
-$red: #c00 // красный цвет текста
+$red: #cc0000 // красный цвет текста
+$blue: #003399 // синий цвет текста
+$head-line: #e8e8e8 // Полоска head-line
 $link-default: #333333 // ссылки по умолчанию
 $time-work: #999999 // время работы в шапке
 $accent: #083289 // основной цвет
+$icon-color: #c3c3c3 // Цвет иконок
+$imput-color: #666666 // цвет теста imput
+$btn-s-hvr: #212121 // цвет btn hover поиска
 
 body
   font-family: 'Open Sans', sans-serif
@@ -14,273 +17,411 @@ body
   font-size: 14px
 
 a
-  color: $link-default
   outline: none
+  color: $link-default
 
-/* Шапка сайта */
-/* Head menu line*/
-.head-menu-line
-  border-bottom: 1px solid $hml-clr-bt
-  max-height: 38px
+/*head*/ 
+.head
+  border-bottom: 1px solid $head-line
 
 .head-slogan
-  padding-top: 7px
+  margin-top: 7px
   p
     display: inline-block
-    color: $slog-blue
+    color: $blue
+    margin-bottom: 9px
     &:first-child
-      padding-right: 10px
       color: $red
-
-.showsm
-  display: none
+      margin-right: 10px
 
 .head-login
-  background: url(../img/icon_account.png) 0 9px no-repeat
-  padding-top: 8px
-  padding-bottom: 7px
-  padding-left: 24px
+  margin-top: 8px
   font-size: 13px
-  color: $black
+  i
+    font-size: 14px
+    margin-right: 4px
+    margin-left: -10px
+    color: $icon-color
   a
     color: $black
+    text-decoration: none
+    &:hover
+      text-decoration: underline
 
-.head-cart.showsm
-  display: block
-
-#boxCart
-  padding-top: 6px
-  .dropdown
-    text-align: right
+.head-cart
+  font-size: 13px
+  margin: 0
+  i
+    font-size: 22px
+    color: $red
+    margin-top: 7px
+  button
+    background-color: transparent
+    border: none
+    outline: none
+    margin-top: 8px
+    padding: 0
+    position: relative
+    span
+      font-size: 11px
+      color: $red
+    &:hover
+      color: $red
+    &::before
+      content: "\f07a"
+      font-family: 'FontAwesome'
+      color: $red
+      position: absolute
+      font-size: 21px
+      top: -7px
+      left: -28px
   .dropdown-menu
-    font-size: 14px
-    left: auto
-    right: 0
-    top: 31px
+    left: auto!important
+    right: 13px!important
+    top: 36px!important
     width: 262px
     border-radius: 0
     border: none
     box-shadow: 1px 3px 15px 0px rgba(0, 0, 0, 0.15)
     padding: 0
+    transform: none!important
 
-.btn-cart
-  text-align: left
-  background: url(../img/icon_cart.png) 0 0 no-repeat
-  padding: 1px 0 2px 30px
-  font-size: 13px
-  color: $black
-  &:hover
-    color: $red
-  &:focus
-    color: $red
-    &:active
-      color: $red
-  &.active:focus
-    color: $red
-  &.focus
-    color: $red
-    &:active
-      color: $red
-  .cart-head-count
-    font-size: 11px
-    color: $red
-
-.dropdown-toggle::after
-  display: none
-
-.btn.focus, .btn:focus
-  box-shadow: none
-
-.cartempty
+.cart-empty
   padding: 14px
+  font-size: 14px
 
-/*Логотип, адрес, телефон, обратка*/
-.head-logo
+/*head contacts*/
+.head-c-logo
   padding-top: 20px
   padding-bottom: 30px
 
-.head-address
-  padding-top: 15px
-  padding-bottom: 5px
-
-.address
-  padding: 0 0 5px 30px
-  background: url(../img/icon_map.png) 0 2px no-repeat
+.head-c-address
+  position: relative
   font-size: 16px
-
-.head-work
-  font-size: 11px
-  padding-top: 2px
-  color: $time-work
-  font-weight: 400
+  padding: 15px 0 0 30px
+  &::before
+    content: "\f041"
+    font-family: "FontAwesome"
+    color: $icon-color
+    font-size: 21px
+    position: absolute
+    top: 11px
+    left: 0
   a
+    display: block
     color: $red
+    font-size: 11px
+    font-weight: 400
     text-decoration: underline
+    margin-top: 2px
     &:hover
       text-decoration: none
-  &.red
-    color: $red
 
-.head-phone
+.head-c-phone
+  display: flex
   padding-top: 20px
   padding-bottom: 20px
-  display: flex
-  .telnumber
+  .separator
+    color: $time-work
+    padding: 0 10px
     font-size: 16px
     font-weight: 700
-    display: inline-block
-    &:first-child
-      padding: 0 0 0 30px
-      background: url(../img/icon_phone.png) 0 2px no-repeat
-      margin-left: 20px
-    .separator
-      color: $time-work
-      padding: 0 10px
 
-.head-callback
+.head-c-tel
+  display: inline-block
+  &:first-child
+    margin-left: 50px
+    position: relative
+    &::before
+      content: "\f095"
+      font-family: "FontAwesome"
+      color: $icon-color
+      font-size: 21px
+      position: absolute
+      top: -5px
+      left: -30px
+      font-weight: 700
+  a
+    font-size: 16px
+    font-weight: 700
+
+.head-c-work
+  font-size: 11px
+  padding-top: 2px
+  font-weight: 400
+  color: $time-work
+
+.red
+  color: $red
+
+.head-c-callback
   padding-top: 30px
-  padding-bottom: 25px
   a
     font-size: 14px
-
-.btn
-  margin-bottom: 5px
-  border-radius: 4px
-  &:hover
-    background: $accent
-    border-color: $accent
-
-.btn-primary
-  background: $red
-  border-color: $red
-  color: $white
+    background-color: $red
+    border-color: $red
+    &:hover, &:focus, &:active
+      box-shadow: none!important
+      background-color: $blue!important
+      border-color: $blue!important
 
 /*Главное меню*/
-.head-menu-wrapper
-  background: $accent
-  border-radius: 2px
-/*Бокс поиска*/
-.head-search
-  padding: 8px 8px 0 8px
-
-.pull-right
-  float: right!important
-
-.boxSearch
-  padding: 0
-  height: 28px
-  position: relative
-
-.boxSearchContent
-  border-radius: 2px
-  background: $white
-  padding: 2px
-  .btn
-    display: none
-  .searchboxlabel
-    padding: 0
-  .searchboxform
-    padding: 0
-    input
-      border: none
-      background: none
-      box-shadow: none
-      width: 86%
-      height: 24px
-  label
-    float: right
-    display: block
-    height: 24px
-    font-size: 14px
-    line-height: 24px
-    color: #083289
-    width: 24px
-    text-align: center
-    margin: 0
-    &:hover
-      cursor: pointer
-      color: #212121
-
-/*общее меню*/
 .head-menu
+  background-color: $blue
+  border-radius: 4px
+
+/*Поиск*/
+.head-menu-search
+  margin-top: 8px
+  .navbar
+    padding: 0
+  .form-inline
+    flex-flow: row
+    background-color: $white
+    border-radius: 2px
+    width: 100%
+    margin-right: 10px
+    input
+      max-height: 28px
+      border: none
+      margin-right: 0!important
+      font-size: 13px
+      color: $imput-color
+      width: 95%
+      &:focus
+        box-shadow: none
+    button
+      padding: 0 8px
+      background-color: $white
+      color: $blue
+      font-size: 14px
+      &:focus
+        box-shadow: none
+      &:hover
+        color: $btn-s-hvr
+
+/*Меню*/
+.head-menu-main
+  padding: 0
   a
+    display: inline-block
     color: $white
+    padding: 12px 12px
+    text-decoration: none
+    text-transform: uppercase
+    &:hover
+      background-color: $red
+
+/*Категории*/
+.head-categorys
+  padding-top: 30px
+  .col-xl-3
+    max-width: 12.5%
+
+.category-block
+  text-align: center
+  &-img
+    display: table-cell
+    vertical-align: middle
+    width: 116px
+    height: 116px
+    border: 3px solid $white
+    background: $white
+    padding: 0
+    margin-bottom: 12px
+    box-shadow: 0px 0px 10px 0px rgba(88, 137, 237, 0.25)
+    transition: .2s
+  &-name
+    margin-top: 15px
+    text-transform: uppercase
+    text-decoration: underline
+    font-weight: 700
+    color: $blue
+    transition: .2s
+  &:hover
+    .category-block-img
+      border-color: #5889ed
+    .category-block-name
+      color: $red
 
 
 
-  /*==========  Desktop First  ==========*/
+/*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
-  /* Шапка сайта*/ 
-  .head-menu-line
-    max-height: 58px
-
+  /*Head*/
   .head-slogan
     p
+      display: block
       &:first-child
         margin-bottom: 0
-
+  
   .head-login
-    margin-top: 10px
-
+    margin-top: 18px
+  
   .head-cart
-    margin-top: 10px
+    button
+      margin-top: 18px
 
-  /*Логотип, адрес, телефон, обратка*/
-  .head-phone
-    padding: 20px 0
-    .telnumber
-      .separator
-        padding: 0 6px
+  /*head-contacts*/
+  .head-c
+    margin-bottom: 20px
+  .head-c-address
+    font-size: 15px
+  
+  .head-c-phone .separator
+    padding: 0 6px
+  
+  .head-c-tel
+    &:first-child
+      margin-left: 35px
+    a
+      font-size: 15px
+
+  /*Главное меню*/
+  .head-menu-main ul li
+    &:first-child
+      display: none
+    a
+      padding: 12px 7px
+
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
-  /*Логотип, адрес, телефон, обратка*/
-  .head-logo
+  /*head*/
+  .head-cart 
+    button span
+      display: block
+      margin-top: -5px
+    .dropdown-menu
+      top: 57px!important
+
+  /*head-contacts*/
+  .head-c-logo
     text-align: center
     padding-top: 15px
     padding-bottom: 0
 
-  .head-phone
+  .head-c-phone
     padding-top: 10px
-    padding-bottom: 15px
+
+  /*Категории*/
+  .head-categorys .col-xl-3
+      max-width: 25%
+  
+  .category-block
+    margin-bottom: 30px
+    &-img
+      width: 150px
+      height: 150px
+    &-name
+      font-size: 13px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
-  /*Шапка сайта*/
-  .head-login
-    margin-top: 5px
+  /*head*/
+  .head-cart 
+    button
+      margin-bottom: 10px
+      span
+        display: inline-block
+        margin-top: 0
+    .dropdown-menu
+      top: 46px!important
+  
+  /*head-contacts*/
+  .head-c-phone
+    padding-top: 20px
 
-  .head-cart
-    margin-top: 5px
-  /*Логотип, адрес, телефон, обратка*/
-  .head-callback
-    padding-top: 10px
-    padding-bottom: 5px
+  .head-c-tel:first-child
+    margin-left: 30px
+  
+  .head-c-tel a
+    font-size: 16px
+  
+  .head-c-callback
+    padding-top: 0
 
+  /*Главное меню*/
+  /*Поиск*/
+  .head-menu-search
+    margin-top: 8px
+    margin-right: -3px
+
+  /*меню*/
+  .head-menu-main
+    button:focus
+      outline: none
+    ul
+      width: 510px
+      li
+        &:first-child
+          display: inline-block
+        a
+          padding: 9px 20px
+          text-transform: capitalize
+          width: 100%
+    .dropdown-menu
+      background: $blue
+      font-size: 14px
+
+  .humburger
+    width: 50px
+    height: 45px
+    position: relative
+    span
+      position: absolute
+      top: 50%
+      left: 50%
+      margin-top: -1px
+      margin-left: -15px
+      width: 30px
+      height: 4px
+      background-color: $white
+      &::before, &::after
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-top: -3px
+        margin-left: -15px
+        width: 30px
+        height: 4px
+        background-color: $white
+      &::before, &::after
+        content: ''
+        display: block
+        transition: 0.2s
+      &::before
+        transform: translateY(-8px)
+      &::after
+        transform: translateY(10px)
+  .hum-active span
+    height: 0
+    &::before
+      transform: rotate(45deg)
+    &::after
+      transform: rotate(-45deg)
+
+  /*Категории*/
+  .head-categorys .col-xl-3
+      max-width: 50%
+  
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
-  /*Шапка сайта*/
-  .hiddsm
-    display: none
+  /*head-contacts*/
+  .head-c-phone .separator
+    padding: 0 1px
 
-  .showsm
-    display: block
+  /*Главное меню*/
+  .head-menu-main button
+    left: 10px
 
-  .telhsm
-    font-weight: bold
-    font-size: 20px
-  
-  .head-tel
-    margin-top: 10px
-
-  .cart-head-text, .cart-head-count
-    display: block
-
+  /*Категории*/
+  .category-block-img
+    width: 116px
+    height: 116px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
   /**/
-  .head-phone .telnumber .separator
-    padding: 0
