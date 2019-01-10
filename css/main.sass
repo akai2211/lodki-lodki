@@ -8,17 +8,51 @@ $link-default: #333333 // ссылки по умолчанию
 $time-work: #999999 // время работы в шапке
 $accent: #083289 // основной цвет
 $icon-color: #c3c3c3 // Цвет иконок
+$cart-shadow: rgba(0, 0, 0, 0.15) // тень у выпадающей корзины
 $imput-color: #666666 // цвет теста imput
 $btn-s-hvr: #212121 // цвет btn hover поиска
+$category-img: rgba(88, 137, 237, 0.25) // тень у img в категориях
+$category-border: #5889ed // бордер у картинки в категориях
+$overlay: rgba(22,64,150,0.75) // Цвет фона для всех всплывашик
+$popup-bg: #164096 // фон popup окна
+$popup-p: #cccccc // тег p в popup
+$internal-shadow: rgba(0,0,0,0.125) // внутренняя тень кнопки в popup
+$star-grey: #d4d4d4 // Серый цвет звездочки
+$star-yellow: #ffda44 // Жолтый цвет звездочки
+$itm-shadow: rgba(88,137,237,0.25) // тень карточки продукта
+$discont-bg: #ed1c24 // фон скидки
+$btn-border: #6590ff // border у кнопок карточки товара
+$btn-bg-prdct: #b8cfff // фон у 3 кномки в карточке товара
+$bg-quick-view: rgba(0,51,153,0.5) // фон быстрого просмотра
+$brd-b: #e3e3e3 // border bottom у блоков скидки и лидеры продаж
+
 
 body
   font-family: 'Open Sans', sans-serif
   color: $black
   font-size: 14px
+  height: 10000px
 
 a
   outline: none
   color: $link-default
+
+/* выравнивание блоков по высоте*/
+.row-flex
+  display: flex
+  flex: 1 1 auto
+  > div[class*='col-']
+    display: flex
+    flex: 1 1 auto
+
+.row-flex-wrap
+  flex-flow: row wrap
+  align-content: flex-start
+  flex: 0
+
+.row-flex > div[class*='col-']
+  margin: -.2px
+  /* hack adjust for wrapping
 
 /*head*/ 
 .head
@@ -82,7 +116,7 @@ a
     width: 262px
     border-radius: 0
     border: none
-    box-shadow: 1px 3px 15px 0px rgba(0, 0, 0, 0.15)
+    box-shadow: 1px 3px 15px 0px $cart-shadow
     padding: 0
     transform: none!important
 
@@ -215,6 +249,7 @@ a
 /*Категории*/
 .head-categorys
   padding-top: 30px
+  padding-bottom: 30px
   .col-xl-3
     max-width: 12.5%
 
@@ -229,7 +264,7 @@ a
     background: $white
     padding: 0
     margin-bottom: 12px
-    box-shadow: 0px 0px 10px 0px rgba(88, 137, 237, 0.25)
+    box-shadow: 0px 0px 10px 0px $category-img
     transition: .2s
   &-name
     margin-top: 15px
@@ -240,9 +275,350 @@ a
     transition: .2s
   &:hover
     .category-block-img
-      border-color: #5889ed
+      border-color: $category-border
     .category-block-name
       color: $red
+
+/*Сертификаты*/
+.sertificates
+  margin-top: 20px
+  a
+    display: block
+    margin-bottom: 5px
+  img
+    max-width: 100%
+
+/*Главный контент*/
+main
+  h1
+    font-size: 32px
+    font-weight: 700
+    padding-bottom: 15px
+    margin: 0
+
+/*Product-itm*/
+.product-itm
+  box-shadow: 0px 0px 10px 0px $itm-shadow
+  padding: 15px 14px
+  margin-top: 15px
+  margin-bottom: 15px
+  // width: 255px
+  height: 490px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  &:hover
+    outline: 1px solid #e8e8e8
+    box-shadow: none
+
+.thumbnail
+  position: relative
+  img
+    max-width: 100%
+  .quick-view-link
+    display: none
+    background: $bg-quick-view
+    width: 130px
+    height: 130px
+    border-radius: 50%
+    text-align: center
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-top: -65px
+    margin-left: -65px
+    color: $white
+    font-size: 13px
+    padding-top: 65px
+    &::before
+      content: "\f064"
+      font-size: 30px
+      font-family: "FontAwesome"
+      color: $white
+      position: absolute
+      top: 20px
+      left: 54px
+  &:hover
+    .quick-view-link
+      display: block
+
+
+.product-name
+  padding: 10px 0
+  overflow: hidden
+  text-overflow: ellipsis
+  a
+    text-transform: uppercase
+    color: $black
+    font-size: 14px
+    text-overflow: ellipsis
+
+.product-rating
+  a
+    font-size: 12px
+    color: $time-work
+    text-decoration: none
+
+.stars
+  display: inline-block
+  a
+    font-size: 20px
+  &-out
+    position: relative
+    color: $star-grey
+    z-index: 1
+  &-in
+    position: absolute
+    z-index: 2
+    color: $star-yellow
+    display: block
+    top: 0
+    left: 0
+    bottom: 0
+    overflow: hidden
+    width: 0
+
+.product-price
+  display: inline-block
+  font-size: 18px
+  color: $red
+  padding-bottom: 10px
+  span
+    font-size: 13px
+    text-decoration: line-through
+    font-weight: 400
+    color: $time-work
+
+.discont
+  display: inline-block
+  background: $discont-bg
+  width: 34px
+  height: 34px
+  border-radius: 50%
+  text-align: center
+  line-height: 34px
+  font-size: 11px
+  color: $white
+
+.product-button
+  text-align: center
+  .product-btn
+    display: inline-block
+    border: 1px solid $btn-border
+    color: #03c
+    text-decoration: none
+    font-weight: bold
+    font-size: 13px
+    width: 49.2%
+    border-radius: 4px
+    margin-top: 5px
+    margin-bottom: 5px
+    padding: 5px
+    &:hover
+      color: $white
+      background-color: $red
+      border-color: $red
+    &:nth-child(3)
+      width: 100%
+      background: $btn-bg-prdct
+      margin-bottom: 0
+      &:hover
+        background-color: $accent
+        border-color: $accent
+
+/*Скидки*/
+.discont-block
+  position: relative
+  .product-itm
+    height: 410px
+
+.discont-link
+  font-size: 22px
+  font-weight: 700
+  display: inline-block
+  margin-top: 10px
+
+.c-plus
+  position: absolute
+  right: 0
+  top: 15px
+  padding-left: 50px
+  padding-right: 10px
+  font-size: 20px
+
+/*Лидеры продаж*/
+.sales-leaders
+  position: relative
+  margin-top: 40px
+  h3
+    display: inline-block
+    font-size: 22px
+    font-weight: 700
+    margin-top: 10px
+.sale-slider
+  .product-itm
+    height: 410px
+    margin-bottom: 5px
+    display: flex
+
+/*Приглашение в магазин*/
+.main-banner-link
+  display: block
+  width: 100%
+.main-banner
+  background: url(../img/banner.png) no-repeat center
+  height: 162px
+  border-radius: 5px
+  margin: 0 auto
+  width: 96%
+  .ttl
+    color: $white
+    font-weight: 700
+    font-size: 18px
+    display: inline-block
+    max-width: 420px
+    text-transform: uppercase
+    padding: 25px 0 15px 35px
+  .cntnt
+    max-width: 425px
+    color: $white
+    font-size: 16px
+    display: inline-block
+    padding: 0 0 0 35px
+    span
+      font-weight: bold
+      font-size: 18px
+
+/*Lightbox*/
+.lightboxOverlay
+  background-color: $overlay
+
+/*Popus*/
+/*Обратный звонок*/
+.modal-backdrop
+  background-color: $popup-bg
+
+.popup-close
+  position: absolute
+  right: 15px
+  top: 15px
+  width: 24px
+  height: 24px
+  border: 1px solid $white!important
+  border-radius: 50%
+  text-align: center
+  span
+    text-shadow: none
+    color: $white
+    box-shadow: none
+    position: absolute
+    top: 2px
+    left: 6px
+    font-size: 20px
+  &:hover
+    outline: none
+    border-color: $red!important
+    span
+      color: $red
+
+.head-c-popup
+  text-align: center
+  color: $white
+  background: $popup-bg
+  padding: 20px 40px 40px 40px
+  h5
+    font-size: 32px
+    font-weight: 700
+    text-transform: uppercase
+  p
+    font-size: 13px
+    color: $popup-p
+    margin-top: 15px
+  label
+    display: block
+    text-align-last: left
+    margin-top: 20px
+    input, textarea
+      margin-top: 15px
+      width: 100%
+      padding: 6px 12px
+      font-size: 13px
+      color: $imput-color
+      &::placeholder
+        color: $imput-color
+
+.btn-popup
+  font-size: 14px
+  background-color: $red
+  border-color: $red
+  padding: 6px 40px
+  box-shadow: none
+  margin-top: 15px
+  &:hover, &:focus, &:active
+    box-shadow: none!important
+    background-color: $blue!important
+    border-color: $blue!important
+  &:active
+    box-shadow: inset 0 3px 5px $internal-shadow!important
+
+/*Быстрая покупка*/
+.quick-bay-block
+  font-size: 13px
+  .bg-blue
+    background-color: $popup-bg
+    color: $white
+    text-align: center
+    h5
+      text-transform: uppercase
+      font-size: 32px
+      padding-top: 12px
+      padding-bottom: 9px
+      font-weight: 700
+  input,textarea
+    width: 100%
+    border-radius: 1px
+    border: 1px solid $btn-border
+    font-size: 13px
+    padding: 6px 12px
+    margin-bottom: 20px
+    color: $imput-color
+    &::placeholder
+      color: $imput-color
+  .btn-quick
+    color: $white
+    background-color: $red
+    border-color: $red
+    border-radius: 4px
+    width: 96%
+    &:hover, &:focus, &:active
+      box-shadow: none!important
+      background-color: $blue!important
+      border-color: $blue!important
+    &:active
+      box-shadow: inset 0 3px 5px $internal-shadow!important
+  p
+    font-size: 14px
+    margin-bottom: 10px
+    span
+      color: $red
+    &:last-child
+      margin-bottom: 0
+
+.quick-body
+  padding: 20px 30px 30px
+
+.media
+  .media-img
+    border: 3px solid $red
+    width: 96px
+    height: 96px
+    margin-bottom: 10px
+    .mr-3
+      width: 90px
+      height: 90px
+  .mt-0
+    font-size: 16px
+
 
 
 
@@ -286,6 +662,35 @@ a
     a
       padding: 12px 7px
 
+  /*Product-itm*/
+  .product-itm
+    height: 455px
+
+  .product-name
+    a
+      font-size: 12px
+  
+  .product-rating
+    margin-bottom: 2px
+
+  .product-price
+    font-size: 14px
+    span
+      font-size: 10px
+  
+  .discont
+    width: 30px
+    height: 30px
+    line-height: 30px
+
+  .product-button .product-btn
+    width: 49%
+
+  /*Приглашение в магазин*/
+  .main-banner
+    .cntnt
+      max-width: 414px
+
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -317,6 +722,20 @@ a
       height: 150px
     &-name
       font-size: 13px
+
+  /*Приглашение в магазин*/
+  .main-banner
+    .ttl
+      padding: 20px 0 15px 15px
+      font-size: 14px
+      max-width: 325px
+    .cntnt
+      padding: 0 0 0 15px
+      font-size: 13px
+      max-width: 272px
+      span
+        font-size: 15px
+
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -406,7 +825,42 @@ a
   /*Категории*/
   .head-categorys .col-xl-3
       max-width: 50%
+
+  /*Product-itm*/
+  .product-itm
+    height: auto!important
+
+  .thumbnail
+    text-align: center
+    img
+      max-width: 480px
+
+  .product-name
+    a
+      font-size: 14px
+
+  .product-price
+    font-size: 18px
+    span
+      font-size: 13px
   
+  .discont
+    width: 34px
+    height: 34px
+    line-height: 34px
+
+  .product-button .product-btn
+    width: 49.5%
+    
+  .discont-block
+    margin-top: 20px
+
+  /*Скидки и Лидеры продаж*/
+  .brd-btm
+    display: block
+    border-bottom: 1px solid $brd-b
+    padding-bottom: 15px
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -422,6 +876,74 @@ a
   .category-block-img
     width: 116px
     height: 116px
+
+  /*Обратный звонок*/
+  .head-c-popup
+    padding: 40px 20px 25px 20px
+    h5
+      font-size: 25px
+    p
+      font-size: 12px
+    label
+      margin-top: 13px
+    input
+      margin-top: 5px
+
+  .btn-popup
+    margin-top: 10px
+
+  /*Быстрый звонок*/
+  .quick-bay-block
+    .bg-blue
+      h5
+        font-size: 22px
+    .media .mt-0
+      font-size: 15px
+    input
+      margin-bottom: 15px
+    p
+      font-size: 12px
+      margin-bottom: 8px
+  .quick-body
+    padding: 20px 20px 20px
+
+  /*Product-itm*/
+  .product-button .product-btn
+    width: 49.3%
+
+  /*Приглашение в магазин*/
+  .main-banner
+    background: url(../img/banner479.png) no-repeat center
+
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
+  /**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+  /**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+  /**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+  /*Скидки*/
+  .collapse.dont-collapse-sm
+    display: block
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+  /**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
   /**/

@@ -7,277 +7,777 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Lightbox -->
+    <link rel="stylesheet" href="/libs/lightbox/lightbox.min.css">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" href="libs/slick/slick.css">
+    <link rel="stylesheet" href="libs/slick/slick-theme.css">
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css">
     <title>Надувные лодки для рыбалки по доступным ценам в Москве | Купить недорого надувную лодку в интернет-магазине Lodki-lodki.ru</title>
   </head>
   <body>
     
-    <!-- Шапка сайта -->
-    <header>
-      <div class="head">
-        <div class="container">
-            <div class="row">
-              <!-- Слоган -->
-              <div class="col-xl-8 col-lg-7 col-md-7 d-md-block d-none">
-                <div class="head-slogan">
-                  <p>Крупнейший магазин надувных лодок в России!</p>
-                  <p>Всегда приятные цены!  Доставка во все регионы!</p>
-                </div>
-              </div>
-              <!-- Форма регистрации -->
-              <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6">
-                <div class="head-login">
-                  <i class="fa fa-user-o" aria-hidden="true"></i>
-                  <a href="#" rel="nofollow">Регистрация</a> /
-                  <a href="#" rel="nofollow">Вход</a>
-                </div>
-              </div>
-              <!-- Корзина -->
-              <div class="col-xl-2 col-lg-2 col-md-2 col-sm-6 col-6">
-                <div class="head-cart float-right">
-                  <button type="button" id="cart-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Корзина <span>(пусто)</span>
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="cart-dropdown">
-                    <div class="cart-empty">Корзина пуста</div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.conteiner -->
-      </div>
-      <!-- /.head -->
-      <!-- head-contacts -->
-      <div class="head-c">
-        <div class="container">
+  <!-- Шапка сайта -->
+  <header>
+    <div class="head">
+      <div class="container">
           <div class="row">
-            <!-- Логотип -->
-            <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
-              <div class="head-c-logo">
-                  <a href="/"><img src="img/logo.png" alt="Лодки ПВХ и Резиновые" title="Лодки ПВХ и Резиновые" /></a>
+            <!-- Слоган -->
+            <div class="col-xl-8 col-lg-7 col-md-7 d-md-block d-none">
+              <div class="head-slogan">
+                <p>Крупнейший магазин надувных лодок в России!</p>
+                <p>Всегда приятные цены!  Доставка во все регионы!</p>
               </div>
             </div>
-            <!-- Адрес -->
-            <div class="col-xl-3 col-lg-2 col-md-3 col-sm-12">
-              <div class="head-c-address">г.Москва, ул.Тимирязевская д.2/3 (Пн-Вс: 10.00-20.00)
-                <a href="#">Схема проезда</a>
+            <!-- Форма регистрации -->
+            <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6">
+              <div class="head-login">
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+                <a href="#" rel="nofollow">Регистрация</a> /
+                <a href="#" rel="nofollow">Вход</a>
               </div>
             </div>
-            <!-- Телефоны -->
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-              <div class="head-c-phone">
-                <div class="head-c-tel">
-                  <a href="tel:84957291360">8(495) 729-13-60</a> <span class="separator">/</span>
-                  <div class="head-c-work">Пн-Вс: 10.00-20.00</div>
+            <!-- Корзина -->
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-6 col-6">
+              <div class="head-cart float-right">
+                <button type="button" id="cart-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Корзина <span>(пусто)</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="cart-dropdown">
+                  <div class="cart-empty">Корзина пуста</div>
                 </div>
-                <div class="head-c-tel">
-                  <a href="tel:88003331795">8-800-333-17-95</a>
-                  <div class="head-c-work red">Звонок по России<br />бесплатный</div>
-                </div>
-              </div>
-            </div>
-            <!-- Обратка -->
-            <div class="col-xl-2 col-lg-3 col-md-3 col-sm-12">
-              <div class="head-c-callback">
-                <a href="#" class="btn btn-danger btn-block">Обратный звонок</a>
               </div>
             </div>
 
           </div>
           <!-- /.row -->
-        </div>
-        <!-- /.container -->
       </div>
-      <!-- /.head-c -->
-      <!-- Главное меню -->
-      
-        
-        <div class="container">
-          <div class="head-menu">
-            <div class="row">
-
-              <!-- поиск -->
-              <div class="col-xl-3 col-lg-3 col-md-10 col-sm-10 col-10 offset-md-2 offset-lg-0 order-lg-2 order-md-1 order-2">
-                
-                <div class="head-menu-search">
-
-                  <nav class="navbar">
-
-                    <form class="form-inline">
-                      <input class="form-control mr-sm-2" type="search"  aria-label="Search">
-                      
-                      <button class="btn my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </form>
-
-                  </nav>
-
-                </div>
-                <!-- /.head-menu-search -->
-
+      <!-- /.conteiner -->
+    </div>
+    <!-- /.head -->
+    <!-- head-contacts -->
+    <div class="head-c">
+      <div class="container">
+        <div class="row">
+          <!-- Логотип -->
+          <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
+            <div class="head-c-logo">
+                <a href="/"><img src="img/logo.png" alt="Лодки ПВХ и Резиновые" title="Лодки ПВХ и Резиновые" /></a>
+            </div>
+          </div>
+          <!-- Адрес -->
+          <div class="col-xl-3 col-lg-2 col-md-3 col-sm-12">
+            <div class="head-c-address">г.Москва, ул.Тимирязевская д.2/3 (Пн-Вс: 10.00-20.00)
+              <a href="#">Схема проезда</a>
+            </div>
+          </div>
+          <!-- Телефоны -->
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+            <div class="head-c-phone">
+              <div class="head-c-tel">
+                <a href="tel:84957291360">8(495) 729-13-60</a> <span class="separator">/</span>
+                <div class="head-c-work">Пн-Вс: 10.00-20.00</div>
               </div>
+              <div class="head-c-tel">
+                <a href="tel:88003331795">8-800-333-17-95</a>
+                <div class="head-c-work red">Звонок по России<br />бесплатный</div>
+              </div>
+            </div>
+          </div>
+          <!-- Обратка -->
+          <div class="col-xl-2 col-lg-3 col-md-3 col-sm-12">
+            <div class="head-c-callback">
+              <a href="#" class="btn btn-danger btn-block" data-toggle="modal" data-target="#callback-modal">Обратный звонок</a>
+            </div>
+          </div>
 
-              <!-- меню -->
-              <div class="col-xl-9 col-lg-9 col-md-12 col-sm-2 col-2 order-lg-1 order-md-2 order-1">
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
 
-                <nav class="navbar navbar-expand-md head-menu-main">
-                  <button class="navbar-toggler humburger" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                      <li>
-                        <a href="#">Главная</span></a>
-                      </li>
+    </div>
+    <!-- /.head-c -->
+    <!-- Главное меню -->
+    
+      
+      <div class="container">
+        <div class="head-menu">
+          <div class="row">
 
-                      <!-- Бокс разделы со всплывающими подменю -->
-                      <li class="d-sm-block d-md-none dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Каталог</a>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <a href="#">Комплекты лодка+мотор</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <!-- /Бокс разделы  со всплывающими подменю -->
+            <!-- поиск -->
+            <div class="col-xl-3 col-lg-3 col-md-10 col-sm-10 col-10 offset-md-2 offset-lg-0 order-lg-2 order-md-1 order-2">
+              
+              <div class="head-menu-search">
 
-                      <li>
-                        <a href="#">О компании</a>
-                      </li>
-                      <li>
-                        <a href="#">Доставка и оплата</a>
-                      </li>
-                      <li>
-                        <a href="#">Гарантия и возврат</a>
-                      </li>
-                      <li>
-                        <a href="#">Свяжитесь с нами</a>
-                      </li>
-                      <li>
-                        <a href="#">Контакты</a>
-                      </li>
-                    </ul>
-                  </div>
+                <nav class="navbar">
+
+                  <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search"  aria-label="Search">
+                    
+                    <button class="btn my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                  </form>
+
                 </nav>
 
               </div>
+              <!-- /.head-menu-search -->
 
             </div>
-            <!-- /.row -->
-          </div>
-          <!-- /.head-menu -->
-        </div>
-        <!-- /.container -->
 
-      <!-- Категории -->
-      <div class="head-categorys">
-        <div class="container">
-          <div class="row">
+            <!-- меню -->
+            <div class="col-xl-9 col-lg-9 col-md-12 col-sm-2 col-2 order-lg-1 order-md-2 order-1">
 
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-              <div class="category-block">
-                <a href="#">
-                  <div class="category-block-img">
-                    <img src="img/pump-boat.png" alt="Лодки с надувным дном">
-                  </div>
-                  <div class="category-block-name">Лодки с надувным дном</div>
-                </a>
-              </div>
+              <nav class="navbar navbar-expand-md head-menu-main">
+                <button class="navbar-toggler humburger" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav">
+                    <li>
+                      <a href="#">Главная</span></a>
+                    </li>
+
+                    <!-- Бокс разделы со всплывающими подменю -->
+                    <li class="d-sm-block d-md-none dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Каталог</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a href="#">Комплекты лодка+мотор</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <!-- /Бокс разделы  со всплывающими подменю -->
+
+                    <li>
+                      <a href="#">О компании</a>
+                    </li>
+                    <li>
+                      <a href="#">Доставка и оплата</a>
+                    </li>
+                    <li>
+                      <a href="#">Гарантия и возврат</a>
+                    </li>
+                    <li>
+                      <a href="#">Свяжитесь с нами</a>
+                    </li>
+                    <li>
+                      <a href="#">Контакты</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
             </div>
 
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-              <div class="category-block">
-                <a href="#">
-                  <div class="category-block-img">
-                    <img src="img/rowing-boat.png" alt="Гребные лодки">
-                  </div>
-                  <div class="category-block-name">Гребные лодки</div>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-              <div class="category-block">
-                <a href="#">
-                  <div class="category-block-img">
-                    <img src="img/transom-boat.png" alt="Лодки с навесным транцем">
-                  </div>
-                  <div class="category-block-name">Лодки с навесным транцем</div>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-              <div class="category-block">
-                <a href="#">
-                  <div class="category-block-img">
-                    <img src="img/motor-boat.png" alt="Лодки ПВХ под мотор">
-                  </div>
-                  <div class="category-block-name">Лодки ПВХ под мотор</div>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-              <div class="category-block">
-                <a href="#">
-                  <div class="category-block-img">
-                    <img src="img/ndnd-boat.png" alt="Лодки НДНД">
-                  </div>
-                  <div class="category-block-name">Лодки НДНД</div>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-              <div class="category-block">
-                <a href="#">
-                  <div class="category-block-img">
-                    <img src="img/board-motor.png" alt="Лодочные моторы">
-                  </div>
-                  <div class="category-block-name">Лодочные моторы</div>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-              <div class="category-block">
-                <a href="#">
-                  <div class="category-block-img">
-                    <img src="img/accessories.png" alt="Аксессуары">
-                  </div>
-                  <div class="category-block-name">Аксессуары</div>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
-              <div class="category-block">
-                <a href="#">
-                  <div class="category-block-img">
-                    <img src="img/complects.png" alt="Комплекты лодка+мотор">
-                  </div>
-                  <div class="category-block-name">Комплекты лодка+мотор</div>
-                </a>
-              </div>
-            </div>
-            
           </div>
           <!-- /.row -->
         </div>
-        <!-- /.container -->
+        <!-- /.head-menu -->
       </div>
-      <!-- /.head-categorys -->
-    </header>
+      <!-- /.container -->
 
+    <!-- Категории -->
+    <div class="head-categorys">
+      <div class="container">
+        <div class="row">
 
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+            <div class="category-block">
+              <a href="#">
+                <div class="category-block-img">
+                  <img src="img/pump-boat.png" alt="Лодки с надувным дном">
+                </div>
+                <div class="category-block-name">Лодки с надувным дном</div>
+              </a>
+            </div>
+          </div>
 
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+            <div class="category-block">
+              <a href="#">
+                <div class="category-block-img">
+                  <img src="img/rowing-boat.png" alt="Гребные лодки">
+                </div>
+                <div class="category-block-name">Гребные лодки</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+            <div class="category-block">
+              <a href="#">
+                <div class="category-block-img">
+                  <img src="img/transom-boat.png" alt="Лодки с навесным транцем">
+                </div>
+                <div class="category-block-name">Лодки с навесным транцем</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+            <div class="category-block">
+              <a href="#">
+                <div class="category-block-img">
+                  <img src="img/motor-boat.png" alt="Лодки ПВХ под мотор">
+                </div>
+                <div class="category-block-name">Лодки ПВХ под мотор</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+            <div class="category-block">
+              <a href="#">
+                <div class="category-block-img">
+                  <img src="img/ndnd-boat.png" alt="Лодки НДНД">
+                </div>
+                <div class="category-block-name">Лодки НДНД</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+            <div class="category-block">
+              <a href="#">
+                <div class="category-block-img">
+                  <img src="img/board-motor.png" alt="Лодочные моторы">
+                </div>
+                <div class="category-block-name">Лодочные моторы</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+            <div class="category-block">
+              <a href="#">
+                <div class="category-block-img">
+                  <img src="img/accessories.png" alt="Аксессуары">
+                </div>
+                <div class="category-block-name">Аксессуары</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+            <div class="category-block">
+              <a href="#">
+                <div class="category-block-img">
+                  <img src="img/complects.png" alt="Комплекты лодка+мотор">
+                </div>
+                <div class="category-block-name">Комплекты лодка+мотор</div>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.head-categorys -->
+  </header>
+
+  <!-- Контент магазина -->
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xl-3 col-lg-3 col-md-4 order-md-1 col-sm-12 order-2">
+        <aside>
+        <!-- Сертификаты -->
+        <div class="sertificates d-none d-md-block">
+          <a href="img/1.png" data-lightbox="imgage-1"><img src="img/1.png" alt="Сертификат"></a>
+          <a href="img/2.png" data-lightbox="imgage-2"><img src="img/2.png" alt="Сертификат"></a>
+        </div>
+
+        <!-- Скидки -->
+        <div class="discont-block">
+          <span class="brd-btm">
+            <a href="#" class="discont-link">Скидки</a>
+            <a href="#collapseDiscont" class="d-md-none c-plus" data-toggle="collapse"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+          </span>
+          <div class="collapse dont-collapse-sm" id="collapseDiscont">
+            <div class="row">
+              <div class="col-xl-12">
+                <div class="product-itm">
+
+                  <div class="product-block-up">
+                    <div class="thumbnail">
+                      <img src="img/1755_0.jpg" alt="">
+                      <a href="#" class="quick-view-link">Быстрый<br>просмотр</a>
+                    </div>
+                    <!-- /.thumbnail -->
+      
+                    <div class="product-name">
+                      <a href="#">Ривьера 3200 СК слань+киль Ривьера 3200 СК слань+киль приветприветпарапвапвва</a>
+                    </div>
+                    <!-- /.product-name -->
+                  </div>
+                  <!-- /.product-block-up -->
+                  <div class="product-block-down">
+                    <div class="product-rating">
+                      <div class="stars">
+                        <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                          <i class="fa fa-star stars-in" style="width: 100%"></i>
+                        </a>
+                        <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                          <i class="fa fa-star stars-in" style="width: 100%"></i>
+                        </a>
+                        <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                          <i class="fa fa-star stars-in" style="width: 50%"></i>
+                        </a>
+                        <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                          <i class="fa fa-star stars-in"></i>
+                        </a>
+                        <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                          <i class="fa fa-star stars-in"></i>
+                        </a>
+                      </div>
+                      <!-- /.stars -->
+                      <a href="#">37 отзывов</a>
+                    </div>
+                    <!-- /.product-rating -->
+                    
+                    <div class="product-price">
+                      <span>321.000 руб.</span> 126.850 руб.
+                    </div>
+                    <!-- /.product-price -->
+                    
+                    <div class="discont"><span>-16%</span></div>
+                    <!-- /.discont -->
+      
+                  </div>
+                  <!-- /.product-block-down -->
+                  
+                </div>
+                <!-- /.product-itm -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Лидеры продаж -->
+        <div class="sales-leaders">
+          <span class="brd-btm">
+            <h3>Лидеры продаж</h3>
+            <a href="#collapseLeaders" class="d-md-none c-plus" data-toggle="collapse"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+          </span>
+          <div class="collapse dont-collapse-sm" id="collapseLeaders">
+            <div class="sale-slider">
+              <div class="product-itm">
+
+                <div class="product-block-up">
+                  <div class="thumbnail">
+                    <img src="img/1755_0.jpg" alt="">
+                    <a href="#" class="quick-view-link">Быстрый<br>просмотр</a>
+                  </div>
+                  <!-- /.thumbnail -->
+    
+                  <div class="product-name">
+                    <a href="#">Ривьера 3200 СК слань+киль Ривьера 3200 СК слань+киль приветприветпарапвапвва</a>
+                  </div>
+                  <!-- /.product-name -->
+                </div>
+                <!-- /.product-block-up -->
+                <div class="product-block-down">
+                  <div class="product-rating">
+                    <div class="stars">
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in" style="width: 100%"></i>
+                      </a>
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in" style="width: 100%"></i>
+                      </a>
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in" style="width: 50%"></i>
+                      </a>
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in"></i>
+                      </a>
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in"></i>
+                      </a>
+                    </div>
+                    <!-- /.stars -->
+                    <a href="#">37 отзывов</a>
+                  </div>
+                    <!-- /.product-rating -->
+                  
+                  <div class="product-price">
+                    <span>321.000 руб.</span> 126.850 руб.
+                  </div>
+                  <!-- /.product-price -->
+                  
+                  <div class="discont"><span>-16%</span></div>
+                  <!-- /.discont -->
+    
+                </div>
+                <!-- /.product-block-down -->
+                
+              </div>
+              <!-- /.product-itm -->
+
+              <div class="product-itm">
+
+                <div class="product-block-up">
+                  <div class="thumbnail">
+                    <img src="img/1755_0.jpg" alt="">
+                    <a href="#" class="quick-view-link">Быстрый<br>просмотр</a>
+                  </div>
+                  <!-- /.thumbnail -->
+    
+                  <div class="product-name">
+                    <a href="#">Ривьера 3200 СК слань+киль Ривьера 3200 СК слань+киль приветприветпарапвапвва</a>
+                  </div>
+                  <!-- /.product-name -->
+                </div>
+                <!-- /.product-block-up -->
+                <div class="product-block-down">
+                  <div class="product-rating">
+                    <div class="stars">
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in" style="width: 100%"></i>
+                      </a>
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in" style="width: 100%"></i>
+                      </a>
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in" style="width: 50%"></i>
+                      </a>
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in"></i>
+                      </a>
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in"></i>
+                      </a>
+                    </div>
+                    <!-- /.stars -->
+                    <a href="#">37 отзывов</a>
+                  </div>
+                    <!-- /.product-rating -->
+                  
+                  <div class="product-price">
+                    <span>321.000 руб.</span> 126.850 руб.
+                  </div>
+                  <!-- /.product-price -->
+                  
+                  <div class="discont"><span>-16%</span></div>
+                  <!-- /.discont -->
+    
+                </div>
+                <!-- /.product-block-down -->
+                
+              </div>
+              <!-- /.product-itm -->
+            </div>
+          </div>
+        </div>
+        </aside>
+      </div>
+
+      <div class="col-xl-9 col-lg-9 col-md-8 order-md-2 col-sm-12 order-1">
+        <main>
+          <!-- Названия категории -->
+          <h1 class="text-center">Надувные лодки</h1>
+
+          <div class="row">
+            
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+              <div class="product-itm">
+
+                <div class="product-block-up">
+                  <div class="thumbnail">
+                    <img src="img/1755_0.jpg" alt="">
+                    <a href="#" class="quick-view-link">Быстрый<br>просмотр</a>
+                  </div>
+                  <!-- /.thumbnail -->
+    
+                  <div class="product-name">
+                    <a href="#">Ривьера 3200 СК слань+киль Ривьера 3200 СК слань+киль приветприветпарапвапвва</a>
+                  </div>
+                  <!-- /.product-name -->
+                </div>
+                <!-- /.product-block-up -->
+                <div class="product-block-down">
+                  <div class="product-rating">
+                    <div class="stars">
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in" style="width: 100%"></i>
+                      </a>
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in" style="width: 100%"></i>
+                      </a>
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in" style="width: 50%"></i>
+                      </a>
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in"></i>
+                      </a>
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in"></i>
+                      </a>
+                    </div>
+                    <!-- /.stars -->
+                    <a href="#">37 отзывов</a>
+                  </div>
+                  <!-- /.product-rating -->
+                  
+                  <div class="product-price">
+                    <span>321.000 руб.</span> 126.850 руб.
+                  </div>
+                  <!-- /.product-price -->
+                  
+                  <div class="discont"><span>-16%</span></div>
+                  <!-- /.discont -->
+    
+                  <div class="product-button">
+                    <a href="#" class="product-btn">Купить</a>
+                    <a href="#" class="product-btn">Подробнее</a>
+                    <a href="#" class="product-btn" data-toggle="modal" data-target="#quick-bay">Купить в один клик</a>
+                  </div>
+                  <!-- /.product-button -->
+                </div>
+                <!-- /.product-block-down -->
+                
+              </div>
+              <!-- /.product-itm -->
+            </div>
+            
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+              <div class="product-itm">
+
+                <div class="product-block-up">
+                  <div class="thumbnail">
+                    <img src="img/1755_0.jpg" alt="">
+                    <a href="#" class="quick-view-link">Быстрый<br>просмотр</a>
+                  </div>
+                  <!-- /.thumbnail -->
+    
+                  <div class="product-name">
+                    <a href="#">Ривьера 3200 СК слань+киль Ривьера 3200 СК </a>
+                  </div>
+                  <!-- /.product-name -->
+                </div>
+                <!-- /.product-block-up -->
+                <div class="product-block-down">
+                  <div class="product-rating">
+                    <a href="#">нет отзывов</a>
+                  </div>
+                  <!-- /.product-rating -->
+                  
+                  <div class="product-price">
+                    <span>21.000 руб.</span> 26.850 руб.
+                  </div>
+                  <!-- /.product-price -->
+                  
+                  <div class="discont"><span>-16%</span></div>
+                  <!-- /.discont -->
+    
+                  <div class="product-button">
+                    <a href="#" class="product-btn">Купить</a>
+                    <a href="#" class="product-btn">Подробнее</a>
+                    <a href="#" class="product-btn" data-toggle="modal" data-target="#quick-bay">Купить в один клик</a>
+                  </div>
+                  <!-- /.product-button -->
+                </div>
+                <!-- /.product-block-down -->
+                
+              </div>
+              <!-- /.product-itm -->
+            </div>
+            
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+              <div class="product-itm">
+
+                <div class="product-block-up">
+                  <div class="thumbnail">
+                    <img src="img/1755_0.jpg" alt="">
+                    <a href="#" class="quick-view-link">Быстрый<br>просмотр</a>
+                  </div>
+                  <!-- /.thumbnail -->
+    
+                  <div class="product-name">
+                    <a href="#">Ривьера 3200 СК слань+киль Ривьера 3200 СК слань+киль приветприветпарапвапвва</a>
+                  </div>
+                  <!-- /.product-name -->
+                </div>
+                <!-- /.product-block-up -->
+                <div class="product-block-down">
+                  <div class="product-rating">
+                    <div class="stars">
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in" style="width: 100%"></i>
+                      </a>
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in" style="width: 100%"></i>
+                      </a>
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in" style="width: 100%"></i>
+                      </a>
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in" style="width: 100%"></i>
+                      </a>
+                      <a href="#" class="fa fa-star stars-out" aria-hidden="true">
+                        <i class="fa fa-star stars-in" style="width: 100%"></i>
+                      </a>
+                    </div>
+                    <!-- /.stars -->
+                    <a href="#">1 отзывов</a>
+                  </div>
+                  <!-- /.product-rating -->
+                  
+                  <div class="product-price">
+                    <span>321.000 руб.</span> 126.850 руб.
+                  </div>
+                  <!-- /.product-price -->
+                  
+                  <div class="discont"><span>-16%</span></div>
+                  <!-- /.discont -->
+    
+                  <div class="product-button">
+                    <a href="#" class="product-btn">Купить</a>
+                    <a href="#" class="product-btn">Подробнее</a>
+                    <a href="#" class="product-btn" data-toggle="modal" data-target="#quick-bay">Купить в один клик</a>
+                  </div>
+                  <!-- /.product-button -->
+                </div>
+                <!-- /.product-block-down -->
+                
+              </div>
+              <!-- /.product-itm -->
+            </div>
+
+            <!-- Приглошение в магазин -->
+            <a href="#" class="main-banner-link">
+              <div class="main-banner">
+                <span class="ttl">Лучше один раз увидеть вживую, чем 100 раз на фотографии</span>
+                <span class="cntnt">Ждем Вас ежедневно <span>с 10.00 до 20.00</span> в нашем магазине на ул. Тимирязевская - 2/3</span>
+              </div>
+            </a>
+
+          </div>
+          <!-- /.row -->
+
+          
+        </main>
+      </div>
+
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+
+  <section class="popups">
+
+    <!-- Обратный звонок -->
+    <div class="modal fade" id="callback-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header1">
+          </div>
+            <button type="button" class="close popup-close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          <div class="head-c-popup">
+            <h5 class="modal-title" id="exampleModalLabel">Обратный звонок</h5>
+            <p>Отправьте заявку на обратный звонок, и наш специалист свяжется с Вами в самое ближайшее время</p>
+
+            <form action="#">
+              <label>Ваше имя:<br>
+                <input type="text" placeholder="Как к Вам обращаться">
+              </label>
+              <label>Ваш Телефон:*<br>
+                <input type="text" placeholder="+7(___)___-__-__" required>
+              </label>
+              <label>Ваш вопрос:<br>
+                <textarea name="" id="" cols="30" rows="3" placeholder="Что Вас интересует"></textarea>
+              </label>
+              <input type="submit" class="btn btn-danger btn-popup" value="Перезвоните мне">
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Быстрая покупка -->
+    <div class="modal fade" id="quick-bay" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header1">
+          </div>
+            <button type="button" class="close popup-close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+
+          <div class="quick-bay-block">
+            <div class="bg-blue">
+              <h5 class="modal-title" id="exampleModalLabel">Быстрая покупка</h5>
+            </div>
+            <div class="quick-body">
+              <div class="row">
+                <div class="media">
+                  <div class="col-4">
+                    <div class="media-img">
+                      <img class="mr-3" src="img/1755_0.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="col-8">
+                    <div class="media-body">
+                      <h5 class="mt-0">Купить Ривьера 3200 СК слань+киль (лодка ПВХ под мотор)</h5>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <!-- /.row -->
+              <form action="#">
+                <div class="row">
+                  <div class="col-4">
+                    <label for="quick-name">Ваше имя:</label>
+                  </div>
+                  <div class="col-8">
+                    <input id="quick-name" type="text" placeholder="Как к Вам обращаться">
+                  </div>
+                  
+                  <div class="col-4">
+                    <label for="quick-tel">Ваш Телефон:*</label>
+                  </div>
+                  <div class="col-8">
+                    <input id="quick-tel" type="text" placeholder="+7(___)___-__-__" required>
+                  </div>
+                  
+                  <div class="col-4">
+                    <label for="quick-com">Коментарии:</label>
+                  </div>
+                  <div class="col-8">
+                    <textarea name="" id="quick-com" cols="30" rows="3" placeholder="Коментарии"></textarea>
+                  </div>
+                  <div class="col-6 offset-3">
+                    <input type="submit" class="btn btn-danger btn-quick" value="Купить">
+                  </div>
+                </div>
+                <!-- /.row -->
+                
+              </form>
+
+              <p>Отправьте заявку, и наш специалист свяжется с Вами в самое ближайшее время.</p>
+              <p><span>Внимание!</span> Если Вы осуществляете заказ из региона, укажите в комментарии Вашу электронную почту</p>
+              
+            </div>
+            <!-- /.quick-body -->
+          </div>
+          <!-- /.quick-bay-block -->
+        </div>
+      </div>
+    </div>
+
+  </section>
+    
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&amp;amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -286,6 +786,10 @@
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Lightbox -->
+    <script src="/libs/lightbox/lightbox.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="libs/slick/slick.min.js"></script>
     <!-- Main JS -->
     <script src="js/common.js"></script>
   </body>
