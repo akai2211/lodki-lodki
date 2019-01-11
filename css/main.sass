@@ -25,6 +25,7 @@ $btn-border: #6590ff // border у кнопок карточки товара
 $btn-bg-prdct: #b8cfff // фон у 3 кномки в карточке товара
 $bg-quick-view: rgba(0,51,153,0.5) // фон быстрого просмотра
 $brd-b: #e3e3e3 // border bottom у блоков скидки и лидеры продаж
+$bg-button-t: #f8f8f8 // фон секции button-text
 
 
 body
@@ -279,6 +280,9 @@ a
     .category-block-name
       color: $red
 
+/*Сайдбар*/
+aside
+  padding-bottom: 20px
 /*Сертификаты*/
 .sertificates
   margin-top: 20px
@@ -290,6 +294,7 @@ a
 
 /*Главный контент*/
 main
+  padding-bottom: 20px
   h1
     font-size: 32px
     font-weight: 700
@@ -470,7 +475,7 @@ main
   height: 162px
   border-radius: 5px
   margin: 0 auto
-  width: 96%
+  width: 96.4%
   .ttl
     color: $white
     font-weight: 700
@@ -488,6 +493,19 @@ main
     span
       font-weight: bold
       font-size: 18px
+
+/*Правила выбора*/
+.button-text
+  background: url(../img/button-text-bg.png) center top no-repeat $bg-button-t
+  padding: 50px 0
+  h2
+    margin-bottom: 18px
+  ol
+    list-style-position: inside
+  ul
+    list-style-position: inside
+  span
+    font-weight: 700
 
 /*Lightbox*/
 .lightboxOverlay
@@ -620,8 +638,6 @@ main
     font-size: 16px
 
 
-
-
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
@@ -691,6 +707,10 @@ main
     .cntnt
       max-width: 414px
 
+  /*Правила выбора*/
+  .button-text
+    h2
+      font-size: 29px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -861,6 +881,12 @@ main
     border-bottom: 1px solid $brd-b
     padding-bottom: 15px
 
+  /*Правила выбора*/
+  .button-text
+    font-size: 13px
+    h2
+      font-size: 25px
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -914,6 +940,13 @@ main
   /*Приглашение в магазин*/
   .main-banner
     background: url(../img/banner479.png) no-repeat center
+
+  /*Правила выбора*/
+  .button-text
+    font-size: 12px
+    h2
+      font-size: 18px
+      font-weight: 600
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

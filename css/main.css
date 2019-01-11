@@ -369,6 +369,11 @@ a {
   color: #cc0000;
 }
 
+/*Сайдбар*/
+aside {
+  padding-bottom: 20px;
+}
+
 /*Сертификаты*/
 .sertificates {
   margin-top: 20px;
@@ -384,6 +389,10 @@ a {
 }
 
 /*Главный контент*/
+main {
+  padding-bottom: 20px;
+}
+
 main h1 {
   font-size: 32px;
   font-weight: 700;
@@ -619,7 +628,7 @@ main h1 {
   height: 162px;
   border-radius: 5px;
   margin: 0 auto;
-  width: 96%;
+  width: 96.4%;
 }
 
 .main-banner .ttl {
@@ -643,6 +652,28 @@ main h1 {
 .main-banner .cntnt span {
   font-weight: bold;
   font-size: 18px;
+}
+
+/*Правила выбора*/
+.button-text {
+  background: url(../img/button-text-bg.png) center top no-repeat #f8f8f8;
+  padding: 50px 0;
+}
+
+.button-text h2 {
+  margin-bottom: 18px;
+}
+
+.button-text ol {
+  list-style-position: inside;
+}
+
+.button-text ul {
+  list-style-position: inside;
+}
+
+.button-text span {
+  font-weight: 700;
 }
 
 /*Lightbox*/
@@ -923,6 +954,10 @@ main h1 {
   .main-banner .cntnt {
     max-width: 414px;
   }
+  /*Правила выбора*/
+  .button-text h2 {
+    font-size: 29px;
+  }
 }
 
 /* Medium Devices, Desktops */
@@ -1115,6 +1150,13 @@ main h1 {
     border-bottom: 1px solid #e3e3e3;
     padding-bottom: 15px;
   }
+  /*Правила выбора*/
+  .button-text {
+    font-size: 13px;
+  }
+  .button-text h2 {
+    font-size: 25px;
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -1175,6 +1217,14 @@ main h1 {
   /*Приглашение в магазин*/
   .main-banner {
     background: url(../img/banner479.png) no-repeat center;
+  }
+  /*Правила выбора*/
+  .button-text {
+    font-size: 12px;
+  }
+  .button-text h2 {
+    font-size: 18px;
+    font-weight: 600;
   }
 }
 
