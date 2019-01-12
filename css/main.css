@@ -655,29 +655,29 @@ main h1 {
 }
 
 /*Правила выбора*/
-.button-text {
-  background: url(../img/button-text-bg.png) center top no-repeat #f8f8f8;
+.bottom-text {
+  background: url(../img/bottom-text-bg.png) center top no-repeat #f8f8f8;
   padding: 50px 0;
 }
 
-.button-text h2 {
+.bottom-text h2 {
   margin-bottom: 18px;
 }
 
-.button-text ol {
+.bottom-text ol {
   list-style-position: inside;
 }
 
-.button-text ul {
+.bottom-text ul {
   list-style-position: inside;
 }
 
-.button-text span {
+.bottom-text span {
   font-weight: 700;
 }
 
 /*Блок обратной формы*/
-.button-callback {
+.bottom-callback {
   padding: 45px 0 70px;
 }
 
@@ -743,6 +743,24 @@ main h1 {
 }
 
 /*Условия*/
+.bottom-conditions {
+  background: #f8f8f8;
+  padding: 65px 0 35px 0;
+  font-size: 13px;
+  color: #666666;
+}
+
+.bottom-conditions-itm h3 {
+  font-weight: 700;
+  font-size: 18px;
+  padding-bottom: 15px;
+  color: #040404;
+}
+
+.bottom-conditions-itm p {
+  margin: 0 0 10px;
+}
+
 .conditions-ship {
   background: url(../img/icon-ship.png) 15px 0 no-repeat;
   padding-top: 120px;
@@ -761,22 +779,64 @@ main h1 {
   padding-bottom: 15px;
 }
 
-.button-conditions {
-  background: #f8f8f8;
-  padding: 65px 0 35px 0;
+/*Преимущества*/
+.bottom-feature {
+  padding: 55px 0 35px 0;
   font-size: 13px;
-  color: #666666;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.button-conditions-itm h3 {
-  font-weight: 700;
-  font-size: 18px;
+.bottom-feature-item {
+  width: 158px;
+}
+
+.feature-diler {
+  background: url(../img/icon-diler.png) 15px 0 no-repeat;
+  padding-top: 75px;
   padding-bottom: 15px;
-  color: #040404;
 }
 
-.button-conditions-itm p {
-  margin: 0 0 10px;
+.feature-back {
+  background: url(../img/icon-back.png) 15px 0 no-repeat;
+  padding-top: 75px;
+  padding-bottom: 15px;
+}
+
+.feature-garantie {
+  background: url(../img/icon-garantie-2.png) 15px 0 no-repeat;
+  padding-top: 75px;
+  padding-bottom: 15px;
+}
+
+.feature-clients {
+  background: url(../img/icon-clients.png) 15px 0 no-repeat;
+  padding-top: 75px;
+  padding-bottom: 15px;
+}
+
+.feature-quantity {
+  background: url(../img/icon-quantity.png) 15px 0 no-repeat;
+  padding-top: 75px;
+  padding-bottom: 15px;
+}
+
+.feature-bestprice {
+  background: url(../img/icon-money.png) 15px 0 no-repeat;
+  padding-top: 75px;
+  padding-bottom: 15px;
+}
+
+.feature-supplier {
+  background: url(../img/icon-box.png) 15px 0 no-repeat;
+  padding-top: 75px;
+  padding-bottom: 15px;
 }
 
 /*Lightbox*/
@@ -1058,8 +1118,12 @@ main h1 {
     max-width: 414px;
   }
   /*Правила выбора*/
-  .button-text h2 {
+  .bottom-text h2 {
     font-size: 29px;
+  }
+  /*Преимущества*/
+  .bottom-feature-item {
+    margin: 5px;
   }
 }
 
@@ -1261,10 +1325,10 @@ main h1 {
     padding-bottom: 15px;
   }
   /*Правила выбора*/
-  .button-text {
+  .bottom-text {
     font-size: 13px;
   }
-  .button-text h2 {
+  .bottom-text h2 {
     font-size: 25px;
   }
   /*Блок обратной формы*/
@@ -1292,6 +1356,11 @@ main h1 {
     width: 80px;
     font-size: 12px;
     padding: 5px 0;
+  }
+  /*Преимущества*/
+  .bottom-feature-item {
+    width: 47%;
+    margin: 5px;
   }
 }
 
@@ -1355,10 +1424,10 @@ main h1 {
     background: url(../img/banner479.png) no-repeat center;
   }
   /*Правила выбора*/
-  .button-text {
+  .bottom-text {
     font-size: 12px;
   }
-  .button-text h2 {
+  .bottom-text h2 {
     font-size: 18px;
     font-weight: 600;
   }
@@ -1383,6 +1452,10 @@ main h1 {
     width: 150px;
     font-size: 14px;
     padding: 7px 0;
+  }
+  /*Преимущества*/
+  .bottom-feature-item {
+    margin: 3px;
   }
 }
 

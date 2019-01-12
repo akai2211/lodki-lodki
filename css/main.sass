@@ -25,7 +25,7 @@ $btn-border: #6590ff // border у кнопок карточки товара
 $btn-bg-prdct: #b8cfff // фон у 3 кномки в карточке товара
 $bg-quick-view: rgba(0,51,153,0.5) // фон быстрого просмотра
 $brd-b: #e3e3e3 // border bottom у блоков скидки и лидеры продаж
-$bg-button-t: #f8f8f8 // фон секции button-text
+$bg-bottom-t: #f8f8f8 // фон секции bottom-text
 $h3-conditins: #040404 // цвет р3 в Условиях
 
 body
@@ -495,8 +495,8 @@ main
       font-size: 18px
 
 /*Правила выбора*/
-.button-text
-  background: url(../img/button-text-bg.png) center top no-repeat $bg-button-t
+.bottom-text
+  background: url(../img/bottom-text-bg.png) center top no-repeat $bg-bottom-t
   padding: 50px 0
   h2
     margin-bottom: 18px
@@ -508,7 +508,7 @@ main
     font-weight: 700
 
 /*Блок обратной формы*/
-.button-callback
+.bottom-callback
   padding: 45px 0 70px
 
 .callback-form-block
@@ -553,6 +553,20 @@ main
       outline: none
 
 /*Условия*/
+.bottom-conditions
+  background: $bg-bottom-t
+  padding: 65px 0 35px 0
+  font-size: 13px
+  color: $imput-color
+  &-itm
+    h3
+      font-weight: 700
+      font-size: 18px
+      padding-bottom: 15px
+      color: $h3-conditins
+    p
+      margin: 0 0 10px
+
 .conditions
   &-ship
     background: url(../img/icon-ship.png) 15px 0 no-repeat;
@@ -567,19 +581,47 @@ main
     padding-top: 120px
     padding-bottom: 15px
 
-.button-conditions
-  background: $bg-button-t
-  padding: 65px 0 35px 0
+
+/*Преимущества*/
+.bottom-feature
+  padding: 55px 0 35px 0
   font-size: 13px
-  color: $imput-color
-  &-itm
-    h3
-      font-weight: 700
-      font-size: 18px
-      padding-bottom: 15px
-      color: $h3-conditins
-    p
-      margin: 0 0 10px
+  text-transform: uppercase
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+  &-item
+    width: 158px
+
+.feature
+  &-diler
+    background: url(../img/icon-diler.png) 15px 0 no-repeat
+    padding-top: 75px
+    padding-bottom: 15px
+  &-back
+    background: url(../img/icon-back.png) 15px 0 no-repeat
+    padding-top: 75px
+    padding-bottom: 15px
+  &-garantie
+    background: url(../img/icon-garantie-2.png) 15px 0 no-repeat
+    padding-top: 75px
+    padding-bottom: 15px
+  &-clients
+    background: url(../img/icon-clients.png) 15px 0 no-repeat
+    padding-top: 75px
+    padding-bottom: 15px
+  &-quantity
+    background: url(../img/icon-quantity.png) 15px 0 no-repeat
+    padding-top: 75px
+    padding-bottom: 15px
+  &-bestprice
+    background: url(../img/icon-money.png) 15px 0 no-repeat
+    padding-top: 75px
+    padding-bottom: 15px
+  &-supplier
+    background: url(../img/icon-box.png) 15px 0 no-repeat
+    padding-top: 75px
+    padding-bottom: 15px
 
 /*Lightbox*/
 .lightboxOverlay
@@ -782,9 +824,13 @@ main
       max-width: 414px
 
   /*Правила выбора*/
-  .button-text
+  .bottom-text
     h2
       font-size: 29px
+
+  /*Преимущества*/
+  .bottom-feature-item
+    margin: 5px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -962,7 +1008,7 @@ main
     padding-bottom: 15px
 
   /*Правила выбора*/
-  .button-text
+  .bottom-text
     font-size: 13px
     h2
       font-size: 25px
@@ -989,6 +1035,11 @@ main
       width: 80px
       font-size: 12px
       padding: 5px 0
+
+  /*Преимущества*/
+  .bottom-feature-item
+    width: 47%
+    margin: 5px
 
 
 /* Extra Small Devices, Phones */
@@ -1045,7 +1096,7 @@ main
     background: url(../img/banner479.png) no-repeat center
 
   /*Правила выбора*/
-  .button-text
+  .bottom-text
     font-size: 12px
     h2
       font-size: 18px
@@ -1068,6 +1119,10 @@ main
       width: 150px
       font-size: 14px
       padding: 7px 0
+
+  /*Преимущества*/
+  .bottom-feature-item
+    margin: 3px
 
 
 /* Custom, iPhone Retina */
