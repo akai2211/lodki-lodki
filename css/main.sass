@@ -507,6 +507,51 @@ main
   span
     font-weight: 700
 
+/*Блок обратной формы*/
+.button-callback
+  padding: 45px 0 70px
+
+.callback-form-block
+  background: url(../img/bg-callback-form.png) no-repeat
+  padding: 35px
+  width: 100%
+
+.pre-text
+  margin-bottom: 20px
+  p
+    margin: 0 0 10px
+    span
+      font-size: 22px
+      font-weight: 700
+      color: $popup-bg
+
+.form-callback
+  background: $popup-bg
+  width: 800px
+  form
+    padding: 15px 30px
+    .fluid
+      width: 30%
+      display: inline-block
+      &-btn
+        text-align: center
+    input
+      width: 95%
+      padding-left: 4px
+  .btn-cb
+    background: $red
+    opacity: 0.75
+    color: $white
+    cursor: pointer
+    border: none
+    border-radius: 3px
+    padding: 7px 0px
+    width: 150px
+    transition: 0.2s
+    &:hover, &:active, &:focus
+      opacity: 1
+      outline: none
+
 /*Lightbox*/
 .lightboxOverlay
   background-color: $overlay
@@ -756,6 +801,12 @@ main
       span
         font-size: 15px
 
+  /*Блок обратной формы*/
+  .callback-form-block
+    background: url(../img/bg-callback-form991.png) no-repeat
+  .form-callback
+    width: 100%
+
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -887,6 +938,29 @@ main
     h2
       font-size: 25px
 
+  /*Блок обратной формы*/
+  .callback-form-block
+    padding: 18px
+  .pre-text
+    p
+      font-size: 13px
+      margin-bottom: 5px
+      span
+        font-size: 17px
+  .form-callback
+    form
+      padding: 10px 20px
+      .fluid
+        width: 35%
+        &-btn
+          width: 20%
+        input[placeholder]
+        font-size: 12px
+    .btn-cb
+      width: 80px
+      font-size: 12px
+      padding: 5px 0
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -947,6 +1021,25 @@ main
     h2
       font-size: 18px
       font-weight: 600
+
+  /*Блок обратной формы*/
+  .callback-form-block
+    background: url(../img/bg-callback-form489.png) no-repeat
+  .form-callback
+    form
+      padding: 15px 30px 0 30px
+      .fluid
+        width: 100%
+      input
+        width: 100%
+        margin-bottom: 15px
+        &[placeholder]
+          font-size: 14px
+    .btn-cb
+      width: 150px
+      font-size: 14px
+      padding: 7px 0
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

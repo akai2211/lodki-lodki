@@ -676,6 +676,72 @@ main h1 {
   font-weight: 700;
 }
 
+/*Блок обратной формы*/
+.button-callback {
+  padding: 45px 0 70px;
+}
+
+.callback-form-block {
+  background: url(../img/bg-callback-form.png) no-repeat;
+  padding: 35px;
+  width: 100%;
+}
+
+.pre-text {
+  margin-bottom: 20px;
+}
+
+.pre-text p {
+  margin: 0 0 10px;
+}
+
+.pre-text p span {
+  font-size: 22px;
+  font-weight: 700;
+  color: #164096;
+}
+
+.form-callback {
+  background: #164096;
+  width: 800px;
+}
+
+.form-callback form {
+  padding: 15px 30px;
+}
+
+.form-callback form .fluid {
+  width: 30%;
+  display: inline-block;
+}
+
+.form-callback form .fluid-btn {
+  text-align: center;
+}
+
+.form-callback form input {
+  width: 95%;
+  padding-left: 4px;
+}
+
+.form-callback .btn-cb {
+  background: #cc0000;
+  opacity: 0.75;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  padding: 7px 0px;
+  width: 150px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.form-callback .btn-cb:hover, .form-callback .btn-cb:active, .form-callback .btn-cb:focus {
+  opacity: 1;
+  outline: none;
+}
+
 /*Lightbox*/
 .lightboxOverlay {
   background-color: rgba(22, 64, 150, 0.75);
@@ -1007,6 +1073,13 @@ main h1 {
   .main-banner .cntnt span {
     font-size: 15px;
   }
+  /*Блок обратной формы*/
+  .callback-form-block {
+    background: url(../img/bg-callback-form991.png) no-repeat;
+  }
+  .form-callback {
+    width: 100%;
+  }
 }
 
 /* Small Devices, Tablets */
@@ -1157,6 +1230,32 @@ main h1 {
   .button-text h2 {
     font-size: 25px;
   }
+  /*Блок обратной формы*/
+  .callback-form-block {
+    padding: 18px;
+  }
+  .pre-text p {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+  .pre-text p span {
+    font-size: 17px;
+  }
+  .form-callback form {
+    padding: 10px 20px;
+  }
+  .form-callback form .fluid {
+    width: 35%;
+    font-size: 12px;
+  }
+  .form-callback form .fluid-btn {
+    width: 20%;
+  }
+  .form-callback .btn-cb {
+    width: 80px;
+    font-size: 12px;
+    padding: 5px 0;
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -1225,6 +1324,28 @@ main h1 {
   .button-text h2 {
     font-size: 18px;
     font-weight: 600;
+  }
+  /*Блок обратной формы*/
+  .callback-form-block {
+    background: url(../img/bg-callback-form489.png) no-repeat;
+  }
+  .form-callback form {
+    padding: 15px 30px 0 30px;
+  }
+  .form-callback form .fluid {
+    width: 100%;
+  }
+  .form-callback form input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .form-callback form input[placeholder] {
+    font-size: 14px;
+  }
+  .form-callback .btn-cb {
+    width: 150px;
+    font-size: 14px;
+    padding: 7px 0;
   }
 }
 
