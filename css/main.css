@@ -742,6 +742,43 @@ main h1 {
   outline: none;
 }
 
+/*Условия*/
+.conditions-ship {
+  background: url(../img/icon-ship.png) 15px 0 no-repeat;
+  padding-top: 120px;
+  padding-bottom: 15px;
+}
+
+.conditions-pay {
+  background: url(../img/icon-pay.png) 15px 0 no-repeat;
+  padding-top: 120px;
+  padding-bottom: 15px;
+}
+
+.conditions-garantie {
+  background: url(../img/icon-garantie.png) 15px 0 no-repeat;
+  padding-top: 120px;
+  padding-bottom: 15px;
+}
+
+.button-conditions {
+  background: #f8f8f8;
+  padding: 65px 0 35px 0;
+  font-size: 13px;
+  color: #666666;
+}
+
+.button-conditions-itm h3 {
+  font-weight: 700;
+  font-size: 18px;
+  padding-bottom: 15px;
+  color: #040404;
+}
+
+.button-conditions-itm p {
+  margin: 0 0 10px;
+}
+
 /*Lightbox*/
 .lightboxOverlay {
   background-color: rgba(22, 64, 150, 0.75);

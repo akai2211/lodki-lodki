@@ -26,7 +26,7 @@ $btn-bg-prdct: #b8cfff // фон у 3 кномки в карточке това�
 $bg-quick-view: rgba(0,51,153,0.5) // фон быстрого просмотра
 $brd-b: #e3e3e3 // border bottom у блоков скидки и лидеры продаж
 $bg-button-t: #f8f8f8 // фон секции button-text
-
+$h3-conditins: #040404 // цвет р3 в Условиях
 
 body
   font-family: 'Open Sans', sans-serif
@@ -551,6 +551,35 @@ main
     &:hover, &:active, &:focus
       opacity: 1
       outline: none
+
+/*Условия*/
+.conditions
+  &-ship
+    background: url(../img/icon-ship.png) 15px 0 no-repeat;
+    padding-top: 120px
+    padding-bottom: 15px
+  &-pay
+    background: url(../img/icon-pay.png) 15px 0 no-repeat;
+    padding-top: 120px
+    padding-bottom: 15px
+  &-garantie
+    background: url(../img/icon-garantie.png) 15px 0 no-repeat;
+    padding-top: 120px
+    padding-bottom: 15px
+
+.button-conditions
+  background: $bg-button-t
+  padding: 65px 0 35px 0
+  font-size: 13px
+  color: $imput-color
+  &-itm
+    h3
+      font-weight: 700
+      font-size: 18px
+      padding-bottom: 15px
+      color: $h3-conditins
+    p
+      margin: 0 0 10px
 
 /*Lightbox*/
 .lightboxOverlay
