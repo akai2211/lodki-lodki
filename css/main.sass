@@ -27,6 +27,8 @@ $bg-quick-view: rgba(0,51,153,0.5) // фон быстрого просмотра
 $brd-b: #e3e3e3 // border bottom у блоков скидки и лидеры продаж
 $bg-bottom-t: #f8f8f8 // фон секции bottom-text
 $h3-conditins: #040404 // цвет р3 в Условиях
+$bg-footer: #164095 // фон футера
+
 
 body
   font-family: 'Open Sans', sans-serif
@@ -623,6 +625,85 @@ main
     padding-top: 75px
     padding-bottom: 15px
 
+/*Футер*/
+footer
+  background: $bg-footer
+  color: $white
+  padding-top: 25px
+  padding-bottom: 20px
+
+.footer-logo
+  padding-top: 25px
+
+.footer-letter
+  background: url(../img/bg-newsletter.png) 0 0 no-repeat $red
+  border-radius: 1px
+  padding: 20px 35px
+  margin-bottom: 15px
+  form
+    .fl-wr
+      display: flex
+      align-items: center
+      .fl-text
+        display: inline-block
+        width: 37%
+        span
+          font-weight: 700
+      .fl-i-t
+        display: inline-block
+        width: 44%
+        input
+          width: 95%
+          padding: 5px 12px
+          font-size: 13px
+      .fl-submit
+        display: inline-block
+        .btn-letter
+          border-radius: 4px
+          background: $accent
+          border: none
+          color: $white
+          padding: 6px 12px
+          &:focus
+            outline: none
+          &:hover
+            cursor: pointer
+            background: $bg-footer
+
+.maling
+  position: relative
+  padding-bottom: 20px
+  span
+    font-size: 22px
+    font-weight: 700
+.mail-plus
+  position: absolute
+  right: 0
+  top: 0
+  padding-left: 50px
+  padding-right: 10px
+  font-size: 20px
+  color: $white
+
+.footer-menu
+  padding-top: 10px
+  padding-bottom: 15px
+  border-right: 1px solid $accent
+  ul
+    display: inline-block
+    list-style: none
+    padding-left: 25px
+    padding-right: 25px
+    border-right: 1px solid $accent
+    li
+      padding: 0 0 7px 0
+    a
+      color: $white
+      text-transform: uppercase
+    &:last-child
+      border-right: none
+
+
 /*Lightbox*/
 .lightboxOverlay
   background-color: $overlay
@@ -882,6 +963,16 @@ main
   .form-callback
     width: 100%
 
+  /*Футер*/
+  .footer-logo
+    margin: 0 0 40px 0
+
+  .footer-letter
+    padding: 20px 25px
+
+  .fl-text
+    padding-right: 15px
+
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -1041,6 +1132,26 @@ main
     width: 47%
     margin: 5px
 
+  /*Футер*/
+  .footer-letter
+    form
+      .fl-wr
+        display: block
+        position: relative
+        .fl-text
+          width: 50%
+          margin-bottom: 20px
+        .fl-i-t
+          width: 50%
+          position: absolute
+          top: 16px
+          input
+            width: 100%
+        .fl-submit
+          display: block
+          input
+            width: 100%
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -1123,6 +1234,15 @@ main
   /*Преимущества*/
   .bottom-feature-item
     margin: 3px
+
+  /*Футер*/
+  .footer-letter
+    form
+      .fl-wr
+        .fl-text
+          font-size: 12px
+          padding-right: 10px
+        .fl-i-t[placeholder]
 
 
 /* Custom, iPhone Retina */

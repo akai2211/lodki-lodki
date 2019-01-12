@@ -711,9 +711,15 @@
           </div>
           <div class="form-callback">
             <form action="#">
-              <div class="fluid"><input type="text" placeholder="Как к Вам обращаться?"></div>
-              <div class="fluid"><input type="tel" placeholder="+7(___)___-__-__" required></div>
-              <div class="fluid fluid-btn"><input type="submit" class="btn-cb" value="Отправить"></div>
+              <div class="fluid">
+                <input type="text" placeholder="Как к Вам обращаться?">
+              </div>
+              <div class="fluid">
+                <input type="tel" placeholder="+7(___)___-__-__" required>
+              </div>
+              <div class="fluid fluid-btn">
+                <input type="submit" class="btn-cb" value="Отправить">
+              </div>
             </form>
           </div>
         </div>
@@ -786,6 +792,85 @@
     <!-- /.button-feature -->
   </div>
   <!-- /.container -->
+
+  <!-- Футер -->
+  <footer>
+    <div class="container">
+      <div class="row">
+
+        <!-- Логотип -->
+        <div class="col-lg-3 col-5 offset-4 offset-lg-0">
+          <div class="footer-logo">
+            <a href="#">
+              <img src="/img/logo_footer.png" alt="Лодки ПВХ и Резиновые" title="Лодки ПВХ и Резиновые">
+            </a>
+          </div>
+          <!-- /.footer-logo -->
+        </div>
+        
+        <!-- Рассылка -->
+        <div class="col-lg-9 col-md-12">
+          <div class="footer-letter">
+            <div class="maling d-md-none">
+              <span>Рассылка</span>
+              <a href="#collapseMail" class="d-md-none mail-plus" data-toggle="collapse"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
+            </div>
+            
+            <form action="#" id="collapseMail" class="collapse dont-collapse-sm">
+              <div class="fl-wr">
+
+                <div class="fl-text"><span>Подписывайтесь!</span> Узнавайте свежую информацию о скидках и акциях первым!</div>
+                <div class="fl-i-t">
+                  <input type="email" placeholder="Введите Ваш Email..." required>
+                </div>
+                <div class="fl-submit">
+                  <input type="submit" value="Подписаться" class="btn-letter">
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+          <!-- /.footer-letter -->
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <div class="row">
+        <div class="col-xl-8">
+          <div class="footer-menu">
+
+            <ul>
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">Доставка и оплата</a></li>
+              <li><a href="#">Гарантия и возврат</a></li>
+              <li><a href="#">Свяжитесь с нами</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+
+            <ul>
+              <li><a href="#">Лодки по цене</a></li>
+              <li><a href="#">Лодки по типу</a></li>
+              <li><a href="#">Лодочные моторы</a></li>
+              <li><a href="#">Лодки по материалу</a></li>
+              <li><a href="#">Лодки по производителю</a></li>
+            </ul>
+
+            <ul>
+              <li><a href="#">Аксессуары</a></li>
+              <li><a href="#">Комплекты лодка+мотор</a></li>
+            </ul>
+
+          </div>
+          <!-- /.footer-menu -->
+        </div>
+        <div class="col-xl-6"></div>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </footer>
+
   <section class="popups">
 
     <!-- Обратный звонок -->
@@ -806,7 +891,7 @@
                 <input type="text" placeholder="Как к Вам обращаться?">
               </label>
               <label>Ваш Телефон:*<br>
-                <input type="text" placeholder="+7(___)___-__-__" required>
+                <input type="tel" placeholder="+7(___)___-__-__" required>
               </label>
               <label>Ваш вопрос:<br>
                 <textarea name="" id="" cols="30" rows="3" placeholder="Что Вас интересует"></textarea>
@@ -863,7 +948,7 @@
                     <label for="quick-tel">Ваш Телефон:*</label>
                   </div>
                   <div class="col-8">
-                    <input id="quick-tel" type="text" placeholder="+7(___)___-__-__" required>
+                    <input id="quick-tel" type="tel" placeholder="+7(___)___-__-__" required>
                   </div>
                   
                   <div class="col-4">

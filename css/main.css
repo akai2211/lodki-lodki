@@ -839,6 +839,122 @@ main h1 {
   padding-bottom: 15px;
 }
 
+/*Футер*/
+footer {
+  background: #164095;
+  color: #ffffff;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+.footer-logo {
+  padding-top: 25px;
+}
+
+.footer-letter {
+  background: url(../img/bg-newsletter.png) 0 0 no-repeat #cc0000;
+  border-radius: 1px;
+  padding: 20px 35px;
+  margin-bottom: 15px;
+}
+
+.footer-letter form .fl-wr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-letter form .fl-wr .fl-text {
+  display: inline-block;
+  width: 37%;
+}
+
+.footer-letter form .fl-wr .fl-text span {
+  font-weight: 700;
+}
+
+.footer-letter form .fl-wr .fl-i-t {
+  display: inline-block;
+  width: 44%;
+}
+
+.footer-letter form .fl-wr .fl-i-t input {
+  width: 95%;
+  padding: 5px 12px;
+  font-size: 13px;
+}
+
+.footer-letter form .fl-wr .fl-submit {
+  display: inline-block;
+}
+
+.footer-letter form .fl-wr .fl-submit .btn-letter {
+  border-radius: 4px;
+  background: #083289;
+  border: none;
+  color: #ffffff;
+  padding: 6px 12px;
+}
+
+.footer-letter form .fl-wr .fl-submit .btn-letter:focus {
+  outline: none;
+}
+
+.footer-letter form .fl-wr .fl-submit .btn-letter:hover {
+  cursor: pointer;
+  background: #164095;
+}
+
+.maling {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.maling span {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.mail-plus {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-left: 50px;
+  padding-right: 10px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.footer-menu {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border-right: 1px solid #083289;
+}
+
+.footer-menu ul {
+  display: inline-block;
+  list-style: none;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-right: 1px solid #083289;
+}
+
+.footer-menu ul li {
+  padding: 0 0 7px 0;
+}
+
+.footer-menu ul a {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.footer-menu ul:last-child {
+  border-right: none;
+}
+
 /*Lightbox*/
 .lightboxOverlay {
   background-color: rgba(22, 64, 150, 0.75);
@@ -1181,6 +1297,16 @@ main h1 {
   .form-callback {
     width: 100%;
   }
+  /*Футер*/
+  .footer-logo {
+    margin: 0 0 40px 0;
+  }
+  .footer-letter {
+    padding: 20px 25px;
+  }
+  .fl-text {
+    padding-right: 15px;
+  }
 }
 
 /* Small Devices, Tablets */
@@ -1362,6 +1488,29 @@ main h1 {
     width: 47%;
     margin: 5px;
   }
+  /*Футер*/
+  .footer-letter form .fl-wr {
+    display: block;
+    position: relative;
+  }
+  .footer-letter form .fl-wr .fl-text {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  .footer-letter form .fl-wr .fl-i-t {
+    width: 50%;
+    position: absolute;
+    top: 16px;
+  }
+  .footer-letter form .fl-wr .fl-i-t input {
+    width: 100%;
+  }
+  .footer-letter form .fl-wr .fl-submit {
+    display: block;
+  }
+  .footer-letter form .fl-wr .fl-submit input {
+    width: 100%;
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -1456,6 +1605,11 @@ main h1 {
   /*Преимущества*/
   .bottom-feature-item {
     margin: 3px;
+  }
+  /*Футер*/
+  .footer-letter form .fl-wr .fl-text {
+    font-size: 12px;
+    padding-right: 10px;
   }
 }
 
