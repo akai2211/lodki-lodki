@@ -31,15 +31,20 @@
               </div>
             </div>
             <!-- Форма регистрации -->
-            <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-6">
+            <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-8">
               <div class="head-login">
                 <i class="fa fa-user-o" aria-hidden="true"></i>
                 <a href="#" rel="nofollow">Регистрация</a> /
                 <a href="#" rel="nofollow">Вход</a>
               </div>
+              
+              <div class="head-tel-xs">
+                <a href="tel:84957291360">8(495) 729-13-60</a>
+              </div>
+              
             </div>
             <!-- Корзина -->
-            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-6 col-6">
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-6 col-4">
               <div class="head-cart float-right">
                 <button type="button" id="cart-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Корзина <span>(пусто)</span>
@@ -107,9 +112,14 @@
           <div class="row">
 
             <!-- поиск -->
-            <div class="col-xl-3 col-lg-3 col-md-10 col-sm-10 col-10 offset-md-2 offset-lg-0 order-lg-2 order-md-1 order-2">
+            <div class="col-lg-3 col-md-10 offset-md-2 offset-lg-0 order-lg-2 offset-0 order-md-1 order-1">
               
+
               <div class="head-menu-search">
+
+                <button class="navbar-toggler humburger" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span></span>
+                </button>
 
                 <nav class="navbar">
 
@@ -127,13 +137,11 @@
             </div>
 
             <!-- меню -->
-            <div class="col-xl-9 col-lg-9 col-md-12 col-sm-2 col-2 order-lg-1 order-md-2 order-1">
+            <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12 order-lg-1 order-md-2 order-2">
 
               <nav class="navbar navbar-expand-md head-menu-main">
-                <button class="navbar-toggler humburger" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                  <span></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                
+                <div class="collapse navbar-collapse brd" id="navbarNavDropdown">
                   <ul class="navbar-nav">
                     <li>
                       <a href="#">Главная</span></a>
@@ -145,6 +153,15 @@
                       <ul class="dropdown-menu">
                         <li>
                           <a href="#">Комплекты лодка+мотор</a>
+                        </li>
+                        <!-- Бокс разделы со всплывающими подменю -->
+                        <li class="d-sm-block d-md-none dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Лодки по типу</a>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a href="#">Гребные лодки</a>
+                            </li>
+                          </ul>
                         </li>
                       </ul>
                     </li>
@@ -285,6 +302,48 @@
 
       <div class="col-xl-3 col-lg-3 col-md-4 order-md-1 col-sm-12 order-2">
         <aside>
+
+        <!-- Каталог -->
+        <div class="catalog d-none d-md-block">
+          <span>Каталог</span>
+          <ul>
+            <li>
+              <a href="#">Комплекты лодка+мотор</a>
+            </li>
+            <!-- Бокс разделы со всплывающими подменю -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Лодки по типу</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">Гребные лодки</a>
+                </li>
+                <li>
+                  <a href="#">Гребные лодки</a>
+                </li>
+                <li>
+                  <a href="#">Гребные лодки</a>
+                </li>
+              </ul>
+            </li>
+            
+            <!-- Бокс разделы со всплывающими подменю -->
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Лодки по типу</a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#">Гребные лодки</a>
+                  </li>
+                  <li>
+                    <a href="#">Гребные лодки</a>
+                  </li>
+                  <li>
+                    <a href="#">Гребные лодки</a>
+                  </li>
+                </ul>
+              </li>
+
+          </ul>
+        </div>
         <!-- Сертификаты -->
         <div class="sertificates d-none d-md-block">
           <a href="img/1.png" data-lightbox="imgage-1"><img src="img/1.png" alt="Сертификат"></a>
@@ -655,6 +714,8 @@
                 <span class="cntnt">Ждем Вас ежедневно <span>с 10.00 до 20.00</span> в нашем магазине на ул. Тимирязевская - 2/3</span>
               </div>
             </a>
+
+            
 
           </div>
           <!-- /.row -->
@@ -1050,6 +1111,11 @@
     </div>
 
   </section>
+
+  <!-- Кнопка "Наверх" -->
+ 
+    <a href="#" class="scrollup"><i class="fa fa-angle-up"></i></a>
+  
     
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&amp;amp;subset=cyrillic" rel="stylesheet">

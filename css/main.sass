@@ -28,13 +28,16 @@ $brd-b: #e3e3e3 // border bottom у блоков скидки и лидеры п
 $bg-bottom-t: #f8f8f8 // фон секции bottom-text
 $h3-conditins: #040404 // цвет р3 в Условиях
 $bg-footer: #164095 // фон футера
-
+$border-menu-1: #222222 // цвет линии у меню на 767 первая половина
+$border-menu-2: #214795 // цвет линии у меню на 767 вторая половина
+$product-itm: #e8e8e8 // border у карточки товара
+$product-btn: #03c // цвет ссылок у карточки товара
+$bg-catalog: #94a3c3 // фон кнопок у каталога
 
 body
   font-family: 'Open Sans', sans-serif
   color: $black
   font-size: 14px
-  height: 9000px
 
 a
   outline: none
@@ -84,6 +87,23 @@ a
     text-decoration: none
     &:hover
       text-decoration: underline
+
+.head-tel-xs
+  display: none
+  margin-left: 20px
+  a
+    font-size: 20px
+    font-weight: 700
+    position: relative
+    &::before
+      content: "\f095"
+      font-family: "FontAwesome"
+      color: $icon-color
+      font-size: 21px
+      position: absolute
+      top: 0
+      left: -20px
+      font-weight: 700
 
 .head-cart
   font-size: 13px
@@ -206,6 +226,8 @@ a
 .head-menu
   background-color: $blue
   border-radius: 4px
+  .humburger
+    display: none
 
 /*Поиск*/
 .head-menu-search
@@ -236,7 +258,7 @@ a
         box-shadow: none
       &:hover
         color: $btn-s-hvr
-
+  
 /*Меню*/
 .head-menu-main
   padding: 0
@@ -285,6 +307,63 @@ a
 /*Сайдбар*/
 aside
   padding-bottom: 20px
+
+/*Каталог*/
+.catalog
+  span
+    font-size: 22px
+    font-weight: 700
+    display: block
+    padding: 9px 9px 25px 0
+    border-bottom: 1px solid $brd-b
+    margin-bottom: 10px
+  ul
+    text-transform: uppercase
+    list-style: none
+    margin: 0
+    padding: 0
+    li
+      background: $bg-catalog
+      margin-bottom: 1px
+      position: relative
+      &:first-child
+        border-top-left-radius: 4px
+        border-top-right-radius: 4px
+      &:last-child
+        border-bottom-left-radius: 4px
+        border-bottom-right-radius: 4px
+      a
+        color: $white
+        display: block
+        padding: 10px 15px
+    .dropdown-toggle::after
+      position: absolute
+      right: 15px
+      top: 15px
+  .dropdown-menu
+    position: relative!important
+    transform: none!important
+    float: none
+    background-color: $bg-bottom-t
+    padding: 10px 0
+    list-style: disc
+    text-transform: none
+    border: none
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+    li
+      margin-bottom: 0
+      background-color: transparent
+      margin-left: 40px
+      color: $bg-catalog
+    a
+      font-size: 14px
+      color: $accent
+      padding: 5px 0
+
+
 /*Сертификаты*/
 .sertificates
   margin-top: 20px
@@ -309,13 +388,12 @@ main
   padding: 15px 14px
   margin-top: 15px
   margin-bottom: 15px
-  // width: 255px
   height: 490px
   display: flex
   flex-direction: column
   justify-content: space-between
   &:hover
-    outline: 1px solid #e8e8e8
+    outline: 1px solid $product-itm
     box-shadow: none
 
 .thumbnail
@@ -412,7 +490,7 @@ main
   .product-btn
     display: inline-block
     border: 1px solid $btn-border
-    color: #03c
+    color: $product-btn
     text-decoration: none
     font-weight: bold
     font-size: 13px
@@ -935,12 +1013,32 @@ footer
   .mt-0
     font-size: 16px
 
+/*Кнопка "Наверх"*/
+.scrollup
+  position: fixed
+  right: 20px
+  bottom: 30px
+  width: 60px
+  height: 60px
+  background: $red
+  text-align: center
+  color: $white
+  font-size: 50px
+  line-height: 24px
+  opacity: 0.4
+  border-radius: 50%
+  transition: .4s
+  display: none
+  &:hover
+    opacity: 1
+    color: $white
+
 
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
-  /*Head*/
+  /*head*/
   .head-slogan
     p
       display: block
@@ -1110,6 +1208,8 @@ footer
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
   /*head*/
+  .head-menu .humburger
+    display: inline-block
   .head-cart 
     button
       margin-bottom: 10px
@@ -1135,30 +1235,54 @@ footer
   /*Главное меню*/
   /*Поиск*/
   .head-menu-search
-    margin-top: 8px
+    display: flex
+    margin-top: 0
     margin-right: -3px
+    .navbar
+      width: 100%
 
   /*меню*/
   .head-menu-main
+    border-top: 1px solid $border-menu-1
     button:focus
       outline: none
     ul
-      width: 510px
       li
         &:first-child
           display: inline-block
         a
           padding: 9px 20px
-          text-transform: capitalize
+          text-transform: none
           width: 100%
     .dropdown-menu
       background: $blue
       font-size: 14px
+      padding: 0
+      // display: block // временно
+      li
+        width: 100%
+        a
+          padding-left: 30px
+        .dropdown-menu
+          a
+            padding-left: 40px
+
+  .brd
+    border-top: 1px solid $border-menu-2
+    // display: block!important // временно
+
+  .dropdown-toggle::after
+    position: absolute
+    top: 15px
+    right: 15px
 
   .humburger
     width: 50px
     height: 45px
     position: relative
+    display: inline-block
+    &:focus
+      outline: none
     span
       position: absolute
       top: 50%
@@ -1291,6 +1415,10 @@ footer
       border-right: none
       margin-bottom: 0
 
+  /*Кнопка "Наверх"*/
+  .scrollup
+    left: 20px
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 575px)
   /*Контакты*/
@@ -1316,6 +1444,24 @@ footer
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
+  /*head*/
+  .head
+    position: fixed
+    background-color: $white
+    width: 100%
+    z-index: 99
+  /*head-login*/
+  .head-login
+    display: none
+
+  .head-tel-xs
+    display: flex
+    align-items: center
+    height: 100%
+
+  .head-cart button
+    margin-top: 10px
+  
   /*head-contacts*/
   .head-c-phone .separator
     padding: 0 1px
