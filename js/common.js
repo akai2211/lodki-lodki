@@ -28,4 +28,10 @@ $(document).ready(function() {
     return false;
   });
 
+  $('.product-slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+  });
+
   });

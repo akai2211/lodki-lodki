@@ -492,7 +492,7 @@ main {
   padding-bottom: 20px;
 }
 
-main h1 {
+main h2 {
   font-size: 32px;
   font-weight: 700;
   padding-bottom: 15px;
@@ -860,21 +860,42 @@ main h1 {
   margin: 0 0 10px;
 }
 
+/*Условия в сайдбаре*/
+.sidebar-conditions {
+  padding: 20px 0 35px 0;
+  font-size: 13px;
+  color: #666666;
+}
+
+.sidebar-conditions-itm h3 {
+  font-weight: 700;
+  font-size: 18px;
+  padding-bottom: 5px;
+  color: #040404;
+}
+
+.sidebar-conditions-itm p {
+  margin: 0 0 10px;
+}
+
 .conditions-ship {
-  background: url(../img/icon-ship.png) 15px 0 no-repeat;
-  padding-top: 120px;
+  background: url(../img/icon-ship.png) 0 0 no-repeat;
+  background-size: 80px;
+  padding-top: 90px;
   padding-bottom: 15px;
 }
 
 .conditions-pay {
-  background: url(../img/icon-pay.png) 15px 0 no-repeat;
-  padding-top: 120px;
+  background: url(../img/icon-pay.png) 0 0 no-repeat;
+  background-size: 80px;
+  padding-top: 90px;
   padding-bottom: 15px;
 }
 
 .conditions-garantie {
-  background: url(../img/icon-garantie.png) 15px 0 no-repeat;
-  padding-top: 120px;
+  background: url(../img/icon-garantie.png) 0 0 no-repeat;
+  background-size: 80px;
+  padding-top: 90px;
   padding-bottom: 15px;
 }
 
@@ -1412,6 +1433,32 @@ footer {
   font-size: 16px;
 }
 
+.cheaper .quick-body {
+  background-color: #164096;
+  color: #ffffff;
+}
+
+.question h5 {
+  font-size: 30px;
+}
+
+.question p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.question label {
+  margin-top: 10px;
+}
+
+.question label input {
+  margin-top: 10px;
+}
+
+.question label textarea {
+  margin-top: 10px;
+}
+
 /*Кнопка "Наверх"*/
 .scrollup {
   position: fixed;
@@ -1434,6 +1481,317 @@ footer {
 .scrollup:hover {
   opacity: 1;
   color: #ffffff;
+}
+
+/*Хлебные крошки*/
+.breadcrumb {
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.breadcrumb span {
+  margin-right: 5px;
+  color: #999999;
+}
+
+.breadcrumb span::after {
+  content: "»";
+  margin-left: 5px;
+}
+
+.breadcrumb span:last-child::after {
+  content: "";
+  margin-left: 0;
+}
+
+.breadcrumb span a {
+  color: #999999;
+}
+
+/*Карточка продукта*/
+.product-card {
+  border-bottom: 1px solid #cc0000;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.product-card h1 {
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.product-slider-img {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(88, 137, 237, 0.25);
+          box-shadow: 0px 0px 10px 0px rgba(88, 137, 237, 0.25);
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.product-slider-img a {
+  display: block;
+}
+
+.product-slider-img a img {
+  width: 100%;
+}
+
+.product-slider {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+}
+
+.product-slider div {
+  text-align: center;
+}
+
+.product-slider div a {
+  display: block;
+}
+
+.product-slider div a img {
+  width: 80px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(88, 137, 237, 0.25);
+          box-shadow: 0px 0px 10px 0px rgba(88, 137, 237, 0.25);
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-left: 10px;
+}
+
+.product-slider .slick-prev:before, .product-slider .slick-next:before {
+  color: #083289;
+}
+
+/*Product-data*/
+.product-data .article {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+
+.product-data .product-rating {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.product-data .product-rating .product-feedback {
+  display: block;
+}
+
+.product-data-price {
+  border-top: 1px solid #cc0000;
+  border-bottom: 1px solid #cc0000;
+  margin-top: 5px;
+}
+
+.product-data-price p {
+  text-align: right;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.product-data-price p a {
+  text-decoration: underline;
+  color: #cc0000;
+}
+
+.product-data-price p a:hover {
+  text-decoration: none;
+}
+
+.product-data-price div {
+  font-size: 30px;
+  font-weight: 700;
+  padding-bottom: 5px;
+  color: #ed1c24;
+}
+
+.product-data-price div span {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  color: #999999;
+  text-decoration: line-through;
+}
+
+/*Количество товара*/
+.product-quantity p {
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.product-quantity .minus, .product-quantity .plus {
+  font-size: 14px;
+  color: #000000;
+  cursor: pointer;
+  margin-right: 3px;
+  vertical-align: middle;
+  border: 1px solid #bdc2c9;
+  width: 35px;
+  height: 35px;
+  line-height: 32px;
+  padding: 0 6px;
+  text-align: center;
+  border-radius: 18px;
+  background-color: transparent;
+}
+
+.product-quantity .minus:focus, .product-quantity .plus:focus {
+  outline: none;
+}
+
+.product-quantity .quantity-num {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #bdc2c9;
+  font-size: 13px;
+  color: #666;
+  line-height: 27px;
+  padding: 0 6px;
+  text-align: center;
+  margin-right: 3px;
+}
+
+.product-data-buttons {
+  text-align: center;
+}
+
+.product-data-buttons a {
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 6px;
+  color: #03c;
+  border: 1px solid #6590ff;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+.product-data-buttons a:hover {
+  color: #ffffff;
+  background-color: #cc0000;
+  border-color: #cc0000;
+  text-decoration: none;
+}
+
+.product-data-buttons a:last-child {
+  color: #ffffff;
+  background-color: #cc0000;
+  border-color: #cc0000;
+  margin-top: 15px;
+}
+
+.product-data-buttons a:last-child:hover {
+  background-color: #083289;
+  border-color: #083289;
+}
+
+.product-popups-btn {
+  margin-top: 80px;
+}
+
+.product-popups-btn a {
+  font-size: 13px;
+  color: #cc0000;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.product-text {
+  margin-bottom: 20px;
+}
+
+/*Теги*/
+.tags {
+  border-top: 1px solid #cc0000;
+  padding-top: 40px;
+  margin-bottom: 10px;
+}
+
+.tags h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.tags a::after {
+  content: ",";
+}
+
+.tags a:last-child::after {
+  content: "";
+}
+
+/*Отзывы*/
+.peaple-feedback {
+  margin-bottom: 20px;
+}
+
+.peaple-feedback h3 {
+  color: #333333;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 23px;
+  padding: 20px 0 15px;
+}
+
+.feedback-text {
+  padding: 15px 25px;
+  border: 1px solid #dddddd;
+  position: relative;
+}
+
+.feedback-text:after {
+  display: block;
+  content: '';
+  width: 14px;
+  height: 9px;
+  background: url(../img/corner1.png) 0 0 no-repeat;
+  position: absolute;
+  left: 25px;
+  bottom: -9px;
+}
+
+.feedback-text p {
+  font-size: 13px;
+}
+
+.feedback-text .product-rating {
+  display: inline-block;
+}
+
+.review-author {
+  text-transform: uppercase;
+  color: #cc0000;
+  padding: 25px 0 25px 25px;
+}
+
+.write-feed {
+  display: inline-block;
+  color: #0033cc;
+  padding: 6px 12px;
+  border: 1px solid #6590ff;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.write-feed:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #cc0000;
+  border-color: #cc0000;
+}
+
+.recommendation h2 {
+  margin-top: 15px;
 }
 
 /*==========  Desktop First  ==========*/
@@ -1518,6 +1876,16 @@ footer {
   .footer-menu ul {
     border-right: none;
     margin-bottom: 0;
+  }
+  /*Карточка товара*/
+  .product-slider {
+    max-width: 355px;
+  }
+  .product-popups-btn {
+    margin-top: 40px;
+  }
+  .product-popups-btn a {
+    margin-bottom: 2px;
   }
 }
 
@@ -1611,6 +1979,24 @@ footer {
   }
   .copyright {
     margin-top: 20px;
+  }
+  /*Хлебные крошки*/
+  .breadcrumb {
+    font-size: 13px;
+  }
+  /*Product-data*/
+  .product-data .article {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .product-slider {
+    width: 240px;
+  }
+  .product-card h1 {
+    font-size: 28px;
+  }
+  .recommendation h2 {
+    font-size: 30px;
   }
 }
 
@@ -1757,9 +2143,6 @@ footer {
   .thumbnail {
     text-align: center;
   }
-  .thumbnail img {
-    max-width: 480px;
-  }
   .product-name a {
     font-size: 14px;
   }
@@ -1856,6 +2239,10 @@ footer {
   .scrollup {
     left: 20px;
   }
+  /*Слидер*/
+  .product-slider {
+    max-width: 400px;
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -1883,6 +2270,13 @@ footer {
   }
   .footer-social {
     margin-top: 30px;
+  }
+  /*Карточка товара*/
+  .product-popups-btn {
+    margin-top: 25px;
+  }
+  .product-popups-btn a {
+    margin-bottom: 0;
   }
 }
 
@@ -2016,6 +2410,25 @@ footer {
   }
   .footer-address {
     font-size: 15px;
+  }
+  /*Хлебные крошки*/
+  .breadcrumb {
+    font-size: 12px;
+  }
+  /*Карточка товара*/
+  .product-card h1 {
+    font-size: 21px;
+  }
+  .tags h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  /*Отзывы*/
+  .peaple-feedback h3 {
+    font-size: 20px;
+  }
+  .peaple-feedback h3 h2 {
+    font-size: 28px;
   }
 }
 

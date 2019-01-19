@@ -33,6 +33,9 @@ $border-menu-2: #214795 // цвет линии у меню на 767 вторая
 $product-itm: #e8e8e8 // border у карточки товара
 $product-btn: #03c // цвет ссылок у карточки товара
 $bg-catalog: #94a3c3 // фон кнопок у каталога
+$quantity-bdr: #bdc2c9 // цвет бордера у количества товаро
+$feedback-brd: #dddddd // цвет бордера у отзывов
+
 
 body
   font-family: 'Open Sans', sans-serif
@@ -376,7 +379,7 @@ aside
 /*Главный контент*/
 main
   padding-bottom: 20px
-  h1
+  h2
     font-size: 32px
     font-weight: 700
     padding-bottom: 15px
@@ -647,18 +650,35 @@ main
     p
       margin: 0 0 10px
 
+/*Условия в сайдбаре*/
+.sidebar-conditions
+  padding: 20px 0 35px 0
+  font-size: 13px
+  color: $imput-color
+  &-itm
+    h3
+      font-weight: 700
+      font-size: 18px
+      padding-bottom: 5px
+      color: $h3-conditins
+    p
+      margin: 0 0 10px
+
 .conditions
   &-ship
-    background: url(../img/icon-ship.png) 15px 0 no-repeat;
-    padding-top: 120px
+    background: url(../img/icon-ship.png) 0 0 no-repeat;
+    background-size: 80px
+    padding-top: 90px
     padding-bottom: 15px
   &-pay
-    background: url(../img/icon-pay.png) 15px 0 no-repeat;
-    padding-top: 120px
+    background: url(../img/icon-pay.png) 0 0 no-repeat;
+    background-size: 80px
+    padding-top: 90px
     padding-bottom: 15px
   &-garantie
-    background: url(../img/icon-garantie.png) 15px 0 no-repeat;
-    padding-top: 120px
+    background: url(../img/icon-garantie.png) 0 0 no-repeat;
+    background-size: 80px
+    padding-top: 90px
     padding-bottom: 15px
 
 
@@ -1013,6 +1033,24 @@ footer
   .mt-0
     font-size: 16px
 
+.cheaper
+  .quick-body
+    background-color: $popup-bg
+    color: $white
+
+.question
+  h5
+    font-size: 30px
+  p
+    font-size: 16px
+    margin-bottom: 0
+  label
+    margin-top: 10px
+    input
+      margin-top: 10px
+    textarea
+      margin-top: 10px
+
 /*Кнопка "Наверх"*/
 .scrollup
   position: fixed
@@ -1033,6 +1071,236 @@ footer
     opacity: 1
     color: $white
 
+/*Хлебные крошки*/
+main
+  // background-color: #0a0
+.breadcrumb
+  background-color: transparent
+  padding-left: 0
+  padding-right: 0
+  span
+    margin-right: 5px
+    color: $time-work
+    &::after
+      content: "»"
+      margin-left: 5px
+    &:last-child
+      &::after
+        content: ""
+        margin-left: 0
+    a
+      color: $time-work
+
+/*Карточка продукта*/
+.product-card
+  border-bottom: 1px solid $red
+  padding-bottom: 30px
+  margin-bottom: 20px
+  h1
+    margin-bottom: 35px
+    text-transform: uppercase
+    font-size: 32px
+    font-weight: 700
+    text-align: center
+
+.product-slider
+  &-block
+  &-img
+    box-shadow: 0px 0px 10px 0px $category-img
+    padding-top: 10px
+    padding-left: 10px
+    a
+      display: block
+      img
+        width: 100%
+
+.product-slider
+  margin-top: 20px
+  margin-left: auto
+  margin-right: auto
+  max-width: 400px
+  div
+    text-align: center
+    a
+      display: block
+      img
+        width: 80px
+        box-shadow: 0px 0px 10px 0px $category-img
+        margin-top: 1px
+        margin-bottom: 1px
+        margin-left: 10px
+  .slick-prev:before, .slick-next:before
+    color: $accent
+
+/*Product-data*/
+.product-data
+  .article
+    display: inline-block
+    vertical-align: top
+    width: 50%
+  .product-rating
+    display: inline-block
+    vertical-align: top
+    .product-feedback
+      display: block
+  &-price
+    border-top: 1px solid $red
+    border-bottom: 1px solid $red
+    margin-top: 5px
+    p
+      text-align: right
+      margin-top: 10px
+      margin-bottom: 0
+      a
+        text-decoration: underline
+        color: $red
+        &:hover
+          text-decoration: none
+    div
+      font-size: 30px
+      font-weight: 700
+      padding-bottom: 5px
+      color: $discont-bg
+      span
+        display: block
+        font-size: 15px
+        font-weight: 400
+        color: $time-work
+        text-decoration: line-through
+
+/*Количество товара*/
+.product-quantity
+  p
+    margin-top: 8px
+    margin-bottom: 20px
+  .minus, .plus
+    font-size: 14px
+    color: $black
+    cursor: pointer
+    margin-right: 3px
+    vertical-align: middle
+    border: 1px solid $quantity-bdr
+    width: 35px
+    height: 35px
+    line-height: 32px
+    padding: 0 6px
+    text-align: center
+    border-radius: 18px;
+    background-color: transparent
+    &:focus
+      outline: none
+  .quantity-num
+    width: 35px
+    height: 35px
+    border: 1px solid $quantity-bdr
+    font-size: 13px
+    color: #666
+    line-height: 27px
+    padding: 0 6px
+    text-align: center
+    margin-right: 3px
+
+.product-data-buttons
+  text-align: center
+  a
+    display: block
+    width: 100%
+    text-transform: uppercase
+    font-size: 15px
+    padding: 6px
+    color: $product-btn
+    border: 1px solid $btn-border
+    margin-top: 20px
+    border-radius: 4px
+    &:hover
+      color: $white
+      background-color: $red
+      border-color: $red
+      text-decoration: none
+    &:last-child
+      color: $white
+      background-color: $red
+      border-color: $red
+      margin-top: 15px
+      &:hover
+        background-color: $accent
+        border-color: $accent
+
+.product-popups-btn
+  margin-top: 80px
+  a
+    font-size: 13px
+    color: $red
+    display: block
+    margin-bottom: 5px
+
+.product-text
+  margin-bottom: 20px
+
+/*Теги*/
+.tags
+  border-top: 1px solid $red
+  padding-top: 40px
+  margin-bottom: 10px
+  h3
+    font-weight: 700
+    text-transform: uppercase
+    font-size: 24px
+    color: $link-default
+    margin-bottom: 20px
+  a
+    &::after
+      content: ","
+    &:last-child
+      &::after
+        content: ""
+
+/*Отзывы*/
+.peaple-feedback
+  margin-bottom: 20px
+  h3
+    color: $link-default
+    font-weight: 700
+    text-transform: uppercase
+    font-size: 23px
+    padding: 20px 0 15px
+.feedback-text
+  padding: 15px 25px
+  border: 1px solid $feedback-brd
+  position: relative
+  &:after
+    display: block
+    content: ''
+    width: 14px
+    height: 9px
+    background: url(../img/corner1.png) 0 0 no-repeat
+    position: absolute
+    left: 25px
+    bottom: -9px
+  p
+    font-size: 13px
+  .product-rating
+    display: inline-block
+.review-author
+  text-transform: uppercase
+  color: $red
+  padding: 25px 0 25px 25px
+.write-feed
+  display: inline-block
+  color: #0033cc
+  padding: 6px 12px
+  border: 1px solid #6590ff
+  border-radius: 4px
+  font-size: 13px
+  &:hover
+    text-decoration: none
+    color: $white
+    background-color: $red
+    border-color: $red
+
+.recommendation
+  h2
+    margin-top: 15px
 
 /*==========  Desktop First  ==========*/
 
@@ -1119,6 +1387,17 @@ footer
       border-right: none
       margin-bottom: 0
 
+  /*Карточка товара*/
+  .product-slider
+    max-width: 355px
+
+  .product-popups-btn
+    margin-top: 40px
+    a
+      margin-bottom: 2px
+
+  
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
   /*head*/
@@ -1204,6 +1483,23 @@ footer
   .copyright
     margin-top: 20px
 
+  /*Хлебные крошки*/
+  .breadcrumb
+    font-size: 13px
+
+  /*Product-data*/
+  .product-data
+    .article
+      width: 100%
+      margin-bottom: 10px
+  .product-slider
+    width: 240px
+  .product-card h1
+    font-size: 28px
+
+  .recommendation
+    h2
+      font-size: 30px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -1327,7 +1623,7 @@ footer
   .thumbnail
     text-align: center
     img
-      max-width: 480px
+      // max-width: 480px
 
   .product-name
     a
@@ -1419,6 +1715,10 @@ footer
   .scrollup
     left: 20px
 
+  /*Слидер*/
+  .product-slider
+    max-width: 400px
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 575px)
   /*Контакты*/
@@ -1441,6 +1741,13 @@ footer
 
   .footer-social
     margin-top: 30px
+
+  /*Карточка товара*/
+  .product-popups-btn
+    margin-top: 25px
+    a
+      margin-bottom: 0
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -1560,6 +1867,23 @@ footer
   .footer-address
     font-size: 15px
 
+  /*Хлебные крошки*/
+  .breadcrumb
+    font-size: 12px
+
+  /*Карточка товара*/
+  .product-card h1
+    font-size: 21px
+  .tags h3
+    font-size: 20px
+    margin-bottom: 10px
+  /*Отзывы*/
+  .peaple-feedback h3
+    font-size: 20px
+
+    .recommendation
+    h2
+      font-size: 28px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
